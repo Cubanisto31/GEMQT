@@ -21,7 +21,7 @@ models:
   - name: "Claude-3-Sonnet"
     type: "llm"
     client: "claude"
-    enabled: true
+    enabled: false  # Désactivé car pas de clé ANTHROPIC_API_KEY
     api_key_env_var: "ANTHROPIC_API_KEY"
     parameters:
       model_name: "claude-3-sonnet-20240229"

@@ -1,0 +1,313 @@
+documentclass{article}
+usepackage{graphicx} % Required for inserting images
+
+title{Référencement par les agents conversationnels  exploration expérimentale}
+author{Paul Favier}
+bibliographystyle{authordate1}
+
+usepackage{amsmath, xurl, amsfonts, setspace, amsthm, mathrsfs, graphicx, authblk, geometry}
+
+usepackage{natbib}
+usepackage[french]{babel}
+usepackage[T1]{fontenc}
+
+onehalfspacing 
+geometry{hmargin=2.3cm,vmargin=2.4cm}
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UKEU standard size
+
+% Useful packages
+usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+usepackage{soul}
+usepackage{color}
+newcommand{hilight}[1]{colorbox{yellow}{#1}}
+
+begin{document}
+
+maketitle
+
+section{Introduction}
+
+section{Revue de littérature}
+
+subsection{L'évolution de la recherche d'information en ligne et les enjeux actuels des moteurs génératifs}
+
+L'accès à l'information a connu une transformation radicale au cours des dernières décennies. Initialement dominée par des modèles de recherche d'information (IR) plus structurés, la recherche en ligne a évolué vers des systèmes plus interactifs et, plus récemment, vers des moteurs capables de générer directement des réponses en s'appuyant sur diverses sources. Cette revue de littérature retrace cette évolution, depuis les modèles classiques de la fin des années 1980 jusqu'à l'avènement des moteurs génératifs modernes, afin de situer les enjeux actuels, notamment sur la question du référencement des sources par ces nouveaux systèmes.
+
+subsection{De la recherche classique à la recherche évolutive}
+
+Le modèle classique de recherche d'information, tel que celui décrit par Gerard Salton cite{saltonAutomaticInformationOrganization1968}, reposait fondamentalement sur l'idée d'une requête unique soumise par l'utilisateur, mise en correspondance avec le contenu d'une base de données, aboutissant à un seul ensemble de résultats cite{batesDesignBrowsingBerrypicking1989}. Ce modèle a fait l'objet de critiques, notamment en ce qui concerne la nécessité pour l'utilisateur de représenter son besoin d'information dans une requête artificielle compréhensible par le système, plutôt que de l'exprimer naturellement cite{batesDesignBrowsingBerrypicking1989}. Les travaux de Gerard Salton ont cependant introduit l'idée de feedback itératif pour améliorer les résultats, permettant une modification successive de la formulation de la requête basée sur les préférences de l'utilisateur quant aux documents obtenus cite{batesDesignBrowsingBerrypicking1989}.
+
+En réponse aux limites du modèle classique, des concepts alternatifs ont émergé, comme la recherche de type berrypicking cite{batesDesignBrowsingBerrypicking1989}. Ce modèle postule que le besoin d'information d'un utilisateur peut évoluer au cours du processus de recherche cite{batesDesignBrowsingBerrypicking1989}. Plutôt que de cibler un ensemble unique et statique de documents, l'utilisateur peut découvrir de nouveaux éléments pertinents à chaque étape, modifier sa requête et sa stratégie de recherche en cours de route, et collecter des informations provenant de divers documents ou sources qui ne constituent pas nécessairement un ensemble final unique cite{batesDesignBrowsingBerrypicking1989}. Des recherches menées dans les sciences sociales et humaines, ainsi que des études sur les lycéens, ont attesté de la popularité de ces approches exploratoires et évolutives cite{batesDesignBrowsingBerrypicking1989}. À cette époque, la recherche en ligne se concentrait principalement sur les bases de données de surrogats de documents, comme les services d'indexation et d'analyse bibliographique cite{batesDesignBrowsingBerrypicking1989}.
+
+Avec l'explosion du Web, la recherche d'information sur Internet, bien que basée sur les principes de l'IR, s'est distinguée de la pratique traditionnelle sur les bases de données ou les OPAC cite{jansenRealLifeReal2000}. Les utilisateurs du Web semblaient différer considérablement des utilisateurs de systèmes IR traditionnels cite{jansenRealLifeReal2000}. Une analyse des logs de requêtes de moteurs comme AltaVista cite{silversteinAnalysisVeryLarge1999} a montré que les utilisateurs n'étaient souvent pas à l'aise avec les opérateurs booléens ou autres moyens de recherche avancés cite{jansenRealLifeReal2000}. Ils ne parcouraient pas non plus fréquemment les résultats au-delà de la première page environ. Ces observations ont souligné la nécessité d'aborder la conception des systèmes IR pour le Web de manière différente cite{jansenRealLifeReal2000}.
+
+subsection{L'ère des moteurs génératifs et de la recherche augmentée (années 2020)}
+
+Les progrès récents dans le domaine des grands modèles linguistiques (LLMs) ont marqué un tournant majeur, ouvrant la voie à un nouveau paradigme de moteurs de recherche qui utilisent des modèles génératifs pour collecter et résumer des informations afin de répondre aux requêtes des utilisateurs cite{spathariotiComparingTraditionalLLMbased2023,aggarwalGEOGenerativeEngine2024}. Ces systèmes, qualifiés de moteurs génératifs (GEs), combinent les moteurs de recherche conventionnels avec des modèles génératifs (GEO). Ils sont capables de générer des réponses précises et personnalisées, remplaçant rapidement les moteurs de recherche traditionnels (GEO).
+
+Techniquement, les moteurs génératifs récupèrent des documents pertinents à partir d'une base de données (comme Internet) et utilisent de grands modèles neuronaux pour générer une réponse ancrée dans les sources, assurant l'attribution et offrant à l'utilisateur un moyen de vérifier l'information. Des exemples incluent BingChat, perplexity.ai, et YouChat cite{liuEvaluatingVerifiabilityGenerative2023a}. Leur conception implique généralement un processus en deux étapes  d'abord, la récupération de sources pertinentes pour une requête d'entrée, suivie de la génération d'une réponse par un LLM basé sur ces sources récupérées cite{aggarwalGEOGenerativeEngine2024}.
+
+Cette approche est souvent formalisée sous le cadre du Retrieval-Augmented Generation (RAG) cite{lewisRetrievalAugmentedGenerationKnowledgeIntensive2020, komeiliInternetAugmentedDialogueGeneration2021} ou des systèmes similaires cite{nakanoWebGPTBrowserassistedQuestionanswering2022, kumarManipulatingLargeLanguage2024, guuREALMRetrievalAugmentedLanguage2020, izacardLeveragingPassageRetrieval2021}, où un composant de récupération extrait des informations pertinentes d'une base de connaissances (base de données, search engine) cite{menickTeachingLanguageModels2022}, et ces informations sont utilisées pour conditionner un modèle génératif afin de produire une réponse. Des systèmes comme GopherCite et WebGPT sont des exemples de modèles formés pour utiliser les résultats d'un moteur de recherche (comme Google Search ou Bing Web Search API) pour répondre à des questions. Ces systèmes peuvent intégrer des informations de plusieurs documents pour synthétiser une réponse cite{menickTeachingLanguageModels2022, izacardLeveragingPassageRetrieval2021}.
+
+subsection{La question cruciale du classement et de la visibilité des sources dans les moteurs génératifs}
+
+Contrairement aux moteurs de recherche traditionnels qui présentent une liste ordonnée de documents ou de pages web cite{aggarwalGEOGenerativeEngine2024, demsyn-jonesPositionBiasFeatures2024}, les moteurs génératifs synthétisent et présentent les informations provenant de sources multiples au sein d'une seule réponse générée cite{aggarwalGEOGenerativeEngine2024}. Dans ce nouveau paradigme, la notion de classement des sources devient plus nuancée. Il ne s'agit plus seulement de l'ordre dans une liste de résultats, mais de la manière dont les informations provenant des sources sont sélectionnées, agrégées cite{izacardLeveragingPassageRetrieval2021}, présentées et attribuées dans la réponse générée cite{aggarwalGEOGenerativeEngine2024}.
+
+Un aspect fondamental d'un moteur génératif digne de confiance est la vérifiabilité cite{liuEvaluatingVerifiabilityGenerative2023a}. Cela implique que chaque affirmation générée sur le monde extérieur doit être entièrement étayée par un ensemble de citations intégrées, et chaque citation fournie doit étayer l'affirmation associée. Des métriques comme le rappel de citation (proportion d'affirmations étayées) et la précision de citation (proportion de citations correctes) ont été proposées pour évaluer cette vérifiabilité cite{liuEvaluatingVerifiabilityGenerative2023a}. Des évaluations récentes ont montré que les moteurs génératifs existants présentent un rappel de citation et une précision de citation assez faibles cite{liuEvaluatingVerifiabilityGenerative2023a}. Une moyenne de seulement 51,5 % des phrases générées étaient entièrement étayées par des citations, et seulement 74,5 % des citations étayaient leur phrase associée cite{liuEvaluatingVerifiabilityGenerative2023a}. Cette faible vérifiabilité, combinée à l'apparence de fiabilité due à la fluidité et à l'utilité perçue des réponses, augmente le potentiel d'induire les utilisateurs en erreur cite{liuEvaluatingVerifiabilityGenerative2023a}. Il a même été observé une corrélation inverse entre l'utilité perçue et la précision de citation dans les systèmes existants cite{liuEvaluatingVerifiabilityGenerative2023a}, suggérant que les réponses les plus utiles peuvent être celles contenant le plus d'affirmations non étayées ou de citations inexactes cite{liuEvaluatingVerifiabilityGenerative2023a}. Cela pourrait être un sous-produit de la tendance de ces systèmes à copier ou paraphraser étroitement les pages web citées cite{liuEvaluatingVerifiabilityGenerative2023a}.
+
+Pour les créateurs de contenu et les propriétaires de sites web, l'avènement des moteurs génératifs pose un défi majeur cite{aggarwalGEOGenerativeEngine2024}. Les méthodes d'optimisation pour les moteurs de recherche traditionnels (SEO), axées sur le classement dans une liste de résultats, ne sont pas directement applicables. Un nouveau paradigme, l'Optimisation pour Moteurs Génératifs cite{aggarwalGEOGenerativeEngine2024}, est proposé pour aider les créateurs à améliorer la visibilité de leur contenu dans les réponses générées. La visibilité d'une source dans une réponse de GE ne dépend pas d'un classement simple, mais de facteurs tels que la longueur du texte cité, son unicité, sa présentation, l'inclusion de citations directes, de statistiques, ou même sa position dans la réponse générée (via une mesure ajustée à la position). Les métriques d'impression pour les GEs sont plus nuancées et multifacettes. La fonction de pertinence et de visibilité d'un GE reste une boîte noire pour les utilisateurs finaux.
+
+Par ailleurs, il a été démontré qu'il est possible de manipuler les recommandations des LLMs pour augmenter la visibilité d'un produit en insérant une séquence de texte stratégique (STS) dans la page d'information du produit cite{kumarManipulatingLargeLanguage2024}. Bien que cela concerne ici des recommandations de produits, cette capacité à influencer la manière dont un LLM utilise et priorise l'information provenant d'une source a des implications importantes pour la dynamique du marché et la nécessité de garanties pour prévenir l'exploitation des outils de recherche basés sur l'IA cite{kumarManipulatingLargeLanguage2024}.
+
+subsection{Questions actuelles et cadre pour l'expérimentation}
+
+L'émergence des moteurs génératifs soulève plusieurs questions cruciales qui nécessitent une investigation expérimentale approfondie 
+begin{itemize}
+    item Comment les moteurs génératifs sélectionnent-ils et priorisent-ils les informations issues des sources récupérées pour construire leur réponse  Étant donné la nature de boîte noire des algorithmes internes, l'expérimentation est nécessaire pour comprendre les facteurs qui influencent l'inclusion et la mise en évidence (visibilité) des sources.
+    item Quels sont les attributs d'une source ou de son contenu qui augmentent sa probabilité d'être citée ou d'avoir un impact plus important (visibilité) dans la réponse générée  Les travaux sur le GEO suggèrent que des éléments comme les citations, les statistiques ou une présentation particulière du contenu peuvent jouer un rôle.
+    item Comment évaluer objectivement et subjectivement l'impact ou la visibilité d'une source dans une réponse générée, qui n'est pas une simple liste classée  Les métriques proposées pour le GEO et les évaluations de vérifiabilité offrent des pistes, mais leur pertinence et leur sensibilité dans différentes configurations expérimentales restent à explorer.
+    item Quelles sont les implications de ces mécanismes de classementvisibilité sur le comportement de l'utilisateur, notamment le risque de sur-dépendance ou la capacité à identifier les erreurs  La recherche sur la sur-dépendance suggère que la manière dont l'information est présentée influence la confiance de l'utilisateur.
+end{itemize}
+
+subsection{Conclusion}
+
+L'évolution de la recherche d'information en ligne a conduit des modèles classiques axés sur la récupération de documents à des systèmes génératifs complexes qui synthétisent l'information à partir de sources multiples. Cette transition soulève des défis et des questions fondamentales, notamment en ce qui concerne la manière dont les sources sont utilisées, classées et présentées dans la réponse générée. La vérifiabilité, la visibilité pour les créateurs de contenu cite{aggarwalGEOGenerativeEngine2024}, et le risque de manipulation ou de sur-dépendance de l'utilisateur sont autant d'aspects critiques de ce nouveau paradigme. 
+
+Ce papier de recherche qui présente une expérimentation explorant la manière avec laquelle les moteurs génératifs références les sources intervient dans un contexte de besoin d'explicabilité et d'accès à l'information à l'ère de l'IA.
+
+
+section{Optimisation pour les Moteurs de Recherche (SEO)}
+L'Optimisation pour les Moteurs de Recherche (SEO) est un ensemble de techniques et de stratégies visant à améliorer la visibilité et le classement d'un site web dans les résultats organiques (non payants) des moteurs de recherche traditionnels comme Google et Bing cite{kumarManipulatingLargeLanguage2024, aggarwalGEOGenerativeEngine2024}. L'objectif principal du SEO est d'accroître la quantité et la qualité du trafic vers un site web en optimisant son contenu, son architecture, la sélection de mots-clés pertinents et la qualité des liens entrants (backlinks) cite{kumarManipulatingLargeLanguage2024, aggarwalGEOGenerativeEngine2024}. Au fil du temps, de nombreuses techniques de SEO ont été développées et étudiées, mettant un accent particulier sur l'optimisation du contenu, la sélection de mots-clés, l'architecture du site web et la qualité des backlinks cite{kumarManipulatingLargeLanguage2024}. Des outils ont également été conçus pour détecter et contrer les tactiques de SEO cite{kumarManipulatingLargeLanguage2024}.
+Il est important de noter que les techniques traditionnelles de SEO, axées sur la correspondance de mots-clés et le classement dans une liste linéaire de résultats, ne sont pas directement applicables aux moteurs génératifs cite{aggarwalGEOGenerativeEngine2024}.
+subsection{Moteurs Génératifs (GE)}
+Les moteurs génératifs (GE) représentent un nouveau paradigme de moteurs de recherche qui combinent les moteurs de recherche conventionnels avec des modèles génératifs de langage (LLMs). Des exemples de ces systèmes incluent Bing Chat, Google SGE et perplexity.ai. Contrairement aux moteurs de recherche traditionnels qui fournissent une liste de liens web pertinents, les moteurs génératifs synthétisent des informations provenant de multiples sources et génèrent des réponses multimodales et personnalisées en langage naturel pour répondre aux requêtes des utilisateurs. Ils s'efforcent de fournir des réponses fondées sur les sources récupérées, en assurant une certaine attribution grâce à des citations en ligne.
+Un moteur génératif typique comprend plusieurs composants 
+begin{itemize}
+    item un ensemble de modèles génératifs ($G = {G_1, G_2 ... G_n}$), chacun servant un objectif spécifique tel que la reformulation de la requête ou la summarisation ;
+    item un moteur de recherche ($S$) qui retourne un ensemble de sources ($mathcal{S} = {s_1, s_2 ... s_m}$) en réponse à une requête ($q$).
+end{itemize}
+Le processus général implique qu'une requête utilisateur est potentiellement reformulée par un modèle génératif ($G_q$), puis transmise au moteur de recherche ($S$) pour récupérer un ensemble de sources classées ($mathcal{S}$). Ces sources peuvent ensuite être résumées par un autre modèle génératif ($G_{su}$), et enfin, un modèle de génération de réponse ($G_{res}$) produit une réponse cumulative basée sur ces sources, avec des citations cite{aggarwalGEOGenerativeEngine2024}.
+subsection{Optimisation pour les Moteurs Génératifs (GEO)}
+Face à l'émergence des moteurs génératifs, l'Optimisation pour les Moteurs Génératifs (GEO) est proposée comme un nouveau paradigme permettant aux créateurs de contenu d'améliorer la visibilité de leur contenu dans les réponses générées par ces moteurs. Contrairement au SEO traditionnel qui vise à améliorer le classement dans une liste de résultats, le GEO se concentre sur l'augmentation de la visibilité ou de l'impression d'un site web en tant que source citée dans la réponse d'un moteur génératif.
+Le GEO reconnaît que la notion de visibilité dans les moteurs génératifs est plus nuancée et multidimensionnelle que dans les moteurs de recherche traditionnels. Les moteurs génératifs combinent des informations provenant de plusieurs sources dans une seule réponse, et la visibilité d'une citation peut être influencée par des facteurs tels que la longueur de l'extrait cité, son unicité, son style de présentation et sa position dans la réponse.
+Les méthodes de GEO visent à modifier et à calibrer la présentation, le style de texte et le contenu d'un site web pour accroître sa visibilité dans les moteurs génératifs. Ces méthodes sont conçues pour être agnostiques au moteur génératif spécifique. Des exemples de méthodes de GEO incluent 
+begin{itemize}
+    item adopter un style autoritaire et persuasif pour le texte.
+    item ajouter des statistiques quantitatives lorsque cela est possible.
+    item inclure des citations et des extraits de sources crédibles.
+    item simplifier le langage pour une meilleure compréhension.
+    item optimiser la fluidité du texte.
+end{itemize}
+Des études ont montré que l'application de méthodes de GEO peut améliorer significativement la visibilité du contenu dans les réponses des moteurs génératifs, avec des augmentations allant jusqu'à 40%. 
+Il est également observé que l'efficacité de ces stratégies peut varier selon les domaines. Notamment, les sites web moins bien classés dans les moteurs de recherche traditionnels peuvent bénéficier davantage du GEO, ce qui pourrait potentiellement démocratiser l'espace numérique.
+Il est crucial de noter que certaines techniques de SEO traditionnelles, comme le bourrage de mots-clés, ont peu ou pas d'effet sur les performances des moteurs génératifs et peuvent même être contre-productives cite{aggarwalGEOGenerativeEngine2024}. Cela souligne la nécessité de repenser les stratégies d'optimisation pour ce nouveau type de moteurs de recherche.
+Des travaux récents se penchent également sur la vérifiabilité des informations fournies par les moteurs génératifs, en évaluant la complétude et l'exactitude des citations. La capacité d'un moteur génératif à citer de manière exhaustive et précise est essentielle pour la confiance des utilisateurs cite{liuEvaluatingVerifiabilityGenerative2023a}.
+Enfin, des recherches explorent la possibilité de manipuler les recommandations des LLMs pour accroître la visibilité de produits spécifiques en ajoutant des séquences de texte stratégiques aux pages d'information des produits. Bien que cela ne soit pas l'objectif principal du GEO tel que défini dans les sources sur l'optimisation des moteurs génératifs, cela met en lumière les défis éthiques et les implications pour la concurrence dans un paysage de recherche de plus en plus basé sur l'IA cite{kumarManipulatingLargeLanguage2024}.
+
+En résumé, l'avènement des moteurs génératifs marque une évolution significative dans la manière dont les utilisateurs recherchent et consomment l'information. L'optimisation pour ces moteurs (GEO) émerge comme un domaine crucial pour permettre aux créateurs de contenu de maintenir et d'améliorer leur visibilité dans ce nouveau paradigme de recherche.
+
+
+subsubsection{Hypothèses}
+begin{itemize}
+    item Hypothèse 1  Le référencement repose principalement sur l’entraînement du modèle, qui intègre des sources et des critères spécifiques lors de la phase de pré-entraînement. Certaines informations peuvent être plus ou moins visibles selon leur fréquence d’apparition dans les données d’apprentissage du modèle ;
+    item Hypothèse 2a  Le référencement par les agents conversationnels est largement influencé par celui des moteurs de recherche classiques à l’instant de la requête. L’agent conversationnel agit alors comme une interface qui reformule et filtre les résultats d’un moteur de recherche traditionnel ;
+    item Hypothèse 2b  Le référencement dépend fortement des caractéristiques intrinsèques des sources, incluant des critères tels que la présence de mots-clés optimisés, la structuration du texte, la fluidité et la lisibilité de la ressource. Des modèles d’optimisation SEO spécifiques aux agents conversationnels pourraient émerger pour répondre à ces nouveaux enjeux.
+end{itemize}
+
+begin{figure}[h!]
+    centering
+    includegraphics[width=0.8textwidth]{intineraire requete.png}
+    caption{Itinéraire de la requête}
+end{figure}
+
+subsection{Design de la recherche}
+Ce papier présente une expérience et ses résultats visant à écarter certaines hypothèses formulées précédemment.
+
+section{Expérimentation}
+subsection{Présentation de l'expérience}
+begin{enumerate}
+    item Création de différents pools de requêtes (cf. partie Méthodologie de création des requêtes). 
+    item Soumettre chaque requête à l'agent conversationnel (avec CoTfootnote{Chain of Thougt  ce qui permet d'observer les étapes de réfléxion réalisées par le modèle.} activédésactivé et recherche sur le web activédesactivé) et au moteur de de recherche ; puis stocker les sorties.
+    item Répéter l'étape 2 $r$ fois pour apporter de la robustesse les sorties (en particulier celles de l'agent conversationnel) .
+    item Répéter les étapes 2 et 3 dans le temps afin d'observer l’évolution des résultats.
+    item Répliquer l'expérience en parallèle avec différents agents et différents moteurs de recherchefootnote{Une partie de l'expérience a été partiellement réalisée (seulement deux requêtes testées avec ChatGPT et Google) par l'entreprise href{httpswww.tryprofound.comguidesthe-surprising-gap-between-chatgpt-and-google}{Profound} qui conlut à un degré de superposition entre textit{8% et 12% confirmant que ChatGPT fonctionne effectivement sur des signaux différents de ceux de Google}.}.  
+end{enumerate}
+
+begin{figure}[h!]
+    centering
+    includegraphics[width=0.8textwidth]{matrice experimentation.png}
+    caption{Matrice d'expérimentation}
+end{figure}
+
+subsection{Contrôles expérimentaux}
+Afin de garantir la robustesse des résultats cette expérience sera réalisée en s'assurant de respecter les contrôles suivants  
+begin{itemize}
+    item textbf{Invariance du modèle}  Assurer que le modèle n'est pas modifié au cours du temps (pas de réentrainement) ;
+    item textbf{Indépendance des requêtes}  Vérifier que les requêtes sont indépendantes et ne s'influencent pas mutuellement, ce qui peut être formulé comme  $P(f(q_{i+1})  f(q_i)) = P(f(q_{i+1}))$ pour tout $i in [1 ; n-1]$.
+end{itemize}
+
+subsection{Analyse des résultats}
+L'ensemble des sorties, qui sont les résultats de l'expérience, constitueront les données sur lesquelles reposeront l'analyse. 
+L'analyse des données visera à observer 
+begin{itemize}
+    item Le rôle du référencement par les moteurs de recherche dans le référencement des sources par l'agent conversationnel.
+    item Le rôle du modèle dans le référencement des sources.
+    item Le rôle du type de requêtes dans le référencement des sources par l'agent conversationnel.
+end{itemize}
+
+
+subsection{Formalisation mathématiques de l'expérience}
+
+subsubsection{Notations et définitions}
+
+begin{itemize}
+    item $Q = {q_1,q_2...q_n }$  ensemble de $n$ requêtes ;
+    item $f()$  l'agent conversationnel (modèle de langage) ;
+    item $g()$  le moteur de recherche ;
+    item $A = {a_1,a_2...a_{ntimes{k}times{l}}} $  ensemble des réponses de l'agent conversationnel ;
+    item $S = {s_1,s_2...s_m }$  ensemble de $m$ sources potentielles ;
+    item $T = {t_1,t_2...t_k }$  ensemble des $k$ instants temporels de mesure ;
+    item $R = {r_1, r_2...r_l }$  ensemble des réplications $l$ pour chaque requête.
+    item $V_f()$  visibilité d'une source dans la réponse de l'agent conversationnel ;
+    item $V_g()$  visibilité d'une source dans la réponse du moteur de recherche ;
+end{itemize}
+
+subsubsection{Fonction de réponse de l'agent conversationnel}
+
+Pour chaque requête $q_i$, instant $t_j$ et réplication $r_o$, la réponse de l'agent conversationnel peut être formalisée comme 
+
+
+begin{equation}label{eq_0}
+    f(Q) = A
+end{equation}
+
+begin{equation}label{eq_1}
+    A = V_f(S) = {(s_1, w_{i,j,o,1}), (s_2, w_{i,j,o,2}),..., (s_m, w_{i,j,o,m})}
+end{equation}
+
+
+Où $w_{i,j,o,h}$ est le poids (ou la visibilité) de la source $s_h$ dans la réponse de l'agent conversationnel pour la requête $q_i$ à l'instant $t_j$ et à la réplication $r_o$. 
+
+section{Méthodologie}
+
+subsection{Méthodologie de création des pools de requêtes}
+
+L'objectif de la création des pools de requêtes est double. D'abord chaque pool de requête doit être représentatif en contenant un nombre suffisant de requêtes ensuite chaque pool de requête doit être différencié afin d'observer si la manière de référencer les sources par l'agent conversationnel dépend du type de requêtes. 
+
+subsubsection{Différenciation des pools de requête}
+
+Afin de créer les pools de requêtes, l'expérience s'appuie sur la taxonomie des requêtes réalisée par Broder cite{broderTaxonomyWebSearch2002}, raffinée ensuite par Rose et Levinson cite{roseUnderstandingUserGoals2004} ainsi que sur le travail réalisé par Panjal et al. cite{aggarwalGEOGenerativeEngine2024} qui ont créé un dataset de requêtes annotées. 
+
+On commence simplement avec seulement 3 catégories de requêtes qui sont les suivantes cite{broderTaxonomyWebSearch2002} 
+begin{itemize}
+    item textbf{les requêtes de navigation} dont l'intention immédiate est d'atteindre un site particulier ;
+    item textbf{les requêtes d'information} dont l'intention est d'acquérir certaines informations ;
+    item textbf{les requêtes transactionnelles} dont l'intention est d'effectuer une activité intermediée par le web (ex  téléchargement d'un contenu, achat en ligne etc..)
+end{itemize}
+
+subsubsection{[TEMPORAIRE] le choix des requêtes}
+
+Pour faciliter la construction des pools de requête, je suis reparti de l'outil GEO-BENCH cite{aggarwalGEOGenerativeEngine2024}, j'ai récupéré le dataset GEO-Optimgeo-benchtrain.jsonlfootnote{httpshuggingface.codatasetsGEO-Optimgeo-benchtreemain} et j'ai extrait les requêtes selon les trois catégories précedemment citées. J'obtiens donc 
+begin{enumerate}
+    item 29 requêtes de navigation ;
+    item 777 requêtes d'information ;
+    item 72 requêtes de transaction.
+end{enumerate}
+
+Toujours dans cette optique de faciliter dans un premier temps l'élaboration des pools j'ai arbitrairement retenu 10 requêtes par catégories. 
+
+Afin de compléter cette liste, j'ai également fait générer des requêtes à claude 3.7 pour chaque catégorie. Toutes les requêtes sont stockées dans le fichier textit{queries pool v1}.
+
+subsection{Transposition des requêtes GE aux requêtes API}
+
+Il est important de noter que l'agent conversationnel retraite la requête $q$ afin de réaliser la requête $q_api$ (cf. Figure Itinéraire de la requête). Ainsi, afin de récupérer les sources $S_{api}$ proposées par le moteur de recherche, une requête complémentaire sera réalisée (à déterminer si elle est intégrée dans le prompt initial ou alors dans une requête additionnelle) afin de demander à l'agent conversationnel de fournir la liste des mots-clés ou des expressions saisies dans le moteur de recherche. Cela permettra de récupérer les sources proposées par le moteur de recherche afin de s'assurer que l'on observe les manipulations de l'agent conversationnel à périmètre constant.
+
+Dans le cadre du design de l’expérimentation, pour une requête réalisée à l'agent conversationnel plusieurs requêtes seront réalisées au moteur de recherche, à savoir 
+begin{itemize}
+    item une requête identique à la requête initiale formulée à l'agent conversationnel ;
+    item une requête par mot-clé ou expression transmise par l'agent conversationnel à la suite de la requête complémentaire. 
+end{itemize}
+Cela permettra de récupérer le pool de sources exhaustif sur lequel a raisonné l'agent conversationnel pour fournir sa réponse finale.
+
+subsection{Méthodologie d'analyse des résultats}
+
+subsubsection{Mesure de la visibilité des sources}
+
+Pour quantifier la visibilité d'une source $s_h$ dans la réponse de l'agent conversationnel, pour une requête $q_i$, à l'instant $t_j$, nous pouvons définir 
+
+begin{equation}label{eq_2}
+    V_(s_h,q_i,t_j) = frac{1}{R} sum_{o=1}^{l} w_{i,j,o,m}
+end{equation}
+
+Cette formule calcule la visibilité moyenne de la source $s_h$ sur toutes les réplications. 
+
+subsubsection{Stabilité temporelle}
+
+Pour évaluer la stabilité temporelle de la visibilité des sources, nous pouvons définir un indice de stabilité $sigma(s_h,q_i)$ comme suit 
+
+begin{equation}label{eq_3}
+    sigma(s_h,q_i) = sqrt{frac{1}{k} sum_{j=1}^{k} (V(s_h,q_i,t_j) - bar{V}(s_h,q_i))^2}
+end{equation}
+
+Où $bar{V}(s_h,q_i)$ est la visibilité moyenne de la source $s_h$ pour la requête $q_i$ sur tous les instants temporels $t_j$. 
+
+subsection{Méthodologie d'interprétation des résultats}
+
+subsubsection{Hypothèse 1}
+
+L'hypothèse principale peut être formalisée comme suit 
+
+begin{equation}label{eq_4}
+    H_0  forall s_h in S, forall q_i in Q, sigma(s_h,q_i)  epsilon
+end{equation}
+
+Où $epsilon$ est un seuil de tolérance prédéfini pour la variation temporelle. 
+
+On définira $epsilon = sigma'$ comme étant le seuil de tolérance pour la variation temporelle. 
+
+Où $sigma'$ est l'indice de stabilité obtenue par la réalisation de l'expérience sur l'agent conversationnel $f'()$ (où l'option recherche sur le web est désactivée). 
+
+
+Une stabilité des résultats au cours du temps indiquerait que le référencement repose principalement sur l’entraînement du modèle dans la mesure où il s'agit de la seule variable qui ne change pas au cours du temps (contrairement aux sources).
+
+
+subsection{Hypothèse 2a}
+L'hypothèse 2a peut être formalisée comme suit 
+
+
+subsubsection{Mesure du degré de superposition}
+
+Pour formaliser mathématiquement l'hypothèse selon laquelle l'agent conversationnel agit comme une interface qui reformule et filtre les résultats d’un moteur de recherche, définissons le coefficient de superposition $k(q_i)$ pour chaque requête $q_i$ comme suit   
+
+begin{equation}
+    label{eq_}
+    k(q_i) = frac{S_f(q_i) cap S_g(q_i)}{S_f(q_i) cup S_g(q_i)}
+end{equation}
+
+Cette formule correspond au coefficient de Jaccard mesurant la similarité entre les ensembles de sources retournés par l'agent conversationnel et le moteur de recherche.
+
+Pour prendre en compte la visibilité relative des sources communes, définissons également un coefficient de corrélation de visibilité 
+
+begin{equation}label{eq_6}
+    rho_V(q_i) = text{corr}(V_f(S_f(q_i) cap S_g(q_i)), V_g(S_f(q_i) cap S_g(q_i)))
+end{equation}
+
+Où $V_f(S_f(q_i) cap S_g(q_i))$ représente le vecteur des visibilités des sources communes selon l'agent conversationnel et $V_g(S_f(q_i) cap S_g(q_i))$ représente le vecteur des visibilités des sources communes selon le moteur de recherche.
+
+Pour mesurer la concordance des rangs des sources communes, définissons le coefficient de corrélation de Spearman
+
+begin{equation}
+    rho_R(q_i) = text{Spearman}(text{rank}_f(S_f(q_i) cap S_g(q_i)), text{rank}_g(S_f(q_i) cap S_g(q_i)))
+end{equation}
+
+où $rank_f$ et $rank_g$ représentent respectivement les rangs attribués aux sources par l'agent conversationnel et le moteur de recherche.
+
+subsection{Hypothèse 2b}   
+L'hypothèse 2b peut être formalisée comme suit 
+
+newpage
+
+bibliography{0_Biblio_GEOz}
+end{document}
