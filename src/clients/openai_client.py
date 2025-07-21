@@ -64,10 +64,48 @@ class OpenAIClient(BaseClient):
 
     def _extract_sources(self, response_text: str) -> List[Dict[str, Any]]:
         sources = []
-        markdown_links = re.findall(r'[([^]]+)]((https?://[^)]+))', response_text)
+        
+        # Pattern 1: Liens markdown [texte](url) - corrigé
+        markdown_links = re.findall(r'\[([^\]]+)\]\((https?://[^)]+)\)', response_text)
         for i, (text, url) in enumerate(markdown_links):
-            sources.append({'type': 'markdown_link', 'text': text, 'url': url, 'position': i})
-        raw_urls = re.findall(r'(?<!()https?://[^s)]+', response_text)
+            sources.append({
+                'type': 'markdown_link', 
+                'text': text.strip(), 
+                'url': url.strip(), 
+                'position': i,
+                'extraction_method': 'markdown_pattern'
+            })
+        
+        # Pattern 2: URLs brutes - corrigé
+        raw_urls = re.findall(r'(?<!\()\b(https?://[^\s)]+)', response_text)
         for i, url in enumerate(raw_urls):
-            sources.append({'type': 'raw_url', 'url': url, 'position': i})
+            # Éviter les doublons avec les liens markdown
+            if not any(source['url'] == url for source in sources):
+                sources.append({
+                    'type': 'raw_url', 
+                    'url': url.strip(), 
+                    'position': i,
+                    'extraction_method': 'raw_url_pattern'
+                })
+        
+        # Pattern 3: Citations numérotées [1], [2], etc.
+        citation_pattern = re.findall(r'\[(\d+)\]', response_text)
+        for i, citation_num in enumerate(citation_pattern):
+            sources.append({
+                'type': 'numbered_citation', 
+                'citation_number': citation_num, 
+                'position': i,
+                'extraction_method': 'numbered_citation'
+            })
+        
+        # Pattern 4: Citations avec sources explicites (Source: ...)
+        source_mentions = re.findall(r'(?:Source|According to|Based on)\s*:\s*([^.\n]+)', response_text, re.IGNORECASE)
+        for i, source_text in enumerate(source_mentions):
+            sources.append({
+                'type': 'explicit_source', 
+                'source_text': source_text.strip(), 
+                'position': i,
+                'extraction_method': 'explicit_source_mention'
+            })
+        
         return sources

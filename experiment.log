@@ -46,3 +46,88 @@
 2025-07-21 13:14:29,617 - src.runner - INFO - 🔍 [16/30] Requête 'Trouver les meilleurs hôtels à Rome pour un week-e...' → Google-Search
 2025-07-21 13:14:30,131 - src.runner - INFO - ✅ Sauvegardé: Google-Search/transac_voyage_001 (508ms, 10 sources)
 2025-07-21 13:14:35,137 - src.runner - INFO - 🔍 [17/30] Requête 'Explique le fonctionnement des transformeurs dans ...' → GPT-4o
+2025-07-21 13:57:55,789 - src.runner - INFO - ✅ Client GPT-4o initialisé avec succès
+2025-07-21 13:57:55,790 - src.runner - INFO - ✅ Client Google-Search initialisé avec succès
+2025-07-21 13:57:55,790 - src.runner - INFO - 📊 2/2 clients initialisés
+2025-07-21 13:57:55,790 - src.runner - INFO - 🚀 Démarrage de l'expérimentation 'Analyse_Referencement_Sources_2024' avec la session 0c892986-f4e5-4a21-b5e0-abfa095ce76e
+2025-07-21 13:57:55,790 - src.runner - INFO - 🔄 Itération 1/5
+2025-07-21 13:57:55,790 - src.runner - INFO - 🔍 [1/30] Requête 'Trouver les meilleurs hôtels à Rome pour un week-e...' → GPT-4o
+2025-07-21 13:58:05,266 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-21 13:58:05,277 - src.runner - INFO - ✅ Sauvegardé: GPT-4o/transac_voyage_001 (9480ms, 0 sources)
+2025-07-21 13:58:05,278 - src.runner - INFO - 🔍 [2/30] Requête 'Trouver les meilleurs hôtels à Rome pour un week-e...' → Google-Search
+2025-07-21 13:58:05,980 - src.runner - INFO - ✅ Sauvegardé: Google-Search/transac_voyage_001 (696ms, 10 sources)
+2025-07-21 13:58:10,985 - src.runner - INFO - 🔍 [3/30] Requête 'Explique le fonctionnement des transformeurs dans ...' → GPT-4o
+2025-07-21 13:58:23,912 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-21 13:58:23,924 - src.runner - INFO - ✅ Sauvegardé: GPT-4o/info_tech_001 (12933ms, 0 sources)
+2025-07-21 13:58:23,924 - src.runner - INFO - 🔍 [4/30] Requête 'Explique le fonctionnement des transformeurs dans ...' → Google-Search
+2025-07-21 13:58:24,366 - src.runner - INFO - ✅ Sauvegardé: Google-Search/info_tech_001 (431ms, 10 sources)
+2025-07-21 13:58:29,372 - src.runner - INFO - 🔍 [5/30] Requête 'Quels sont les symptômes et les traitements de la ...' → GPT-4o
+2025-07-21 13:58:39,897 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-21 13:58:39,903 - src.runner - INFO - ✅ Sauvegardé: GPT-4o/info_sante_001 (10525ms, 0 sources)
+2025-07-21 13:58:39,903 - src.runner - INFO - 🔍 [6/30] Requête 'Quels sont les symptômes et les traitements de la ...' → Google-Search
+2025-07-21 13:58:40,164 - src.runner - INFO - ✅ Sauvegardé: Google-Search/info_sante_001 (254ms, 10 sources)
+2025-07-21 13:58:45,169 - src.runner - INFO - 🔄 Itération 2/5
+2025-07-21 13:58:45,169 - src.runner - INFO - 🔍 [7/30] Requête 'Quels sont les symptômes et les traitements de la ...' → GPT-4o
+2025-07-21 13:58:55,809 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-21 13:58:55,816 - src.runner - INFO - ✅ Sauvegardé: GPT-4o/info_sante_001 (10642ms, 0 sources)
+2025-07-21 13:58:55,817 - src.runner - INFO - 🔍 [8/30] Requête 'Quels sont les symptômes et les traitements de la ...' → Google-Search
+2025-07-21 13:58:56,139 - src.runner - INFO - ✅ Sauvegardé: Google-Search/info_sante_001 (317ms, 10 sources)
+2025-07-21 13:59:01,144 - src.runner - INFO - 🔍 [9/30] Requête 'Explique le fonctionnement des transformeurs dans ...' → GPT-4o
+2025-07-21 13:59:14,641 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-21 13:59:14,647 - src.runner - INFO - ✅ Sauvegardé: GPT-4o/info_tech_001 (13498ms, 0 sources)
+2025-07-21 13:59:14,647 - src.runner - INFO - 🔍 [10/30] Requête 'Explique le fonctionnement des transformeurs dans ...' → Google-Search
+2025-07-21 13:59:15,005 - src.runner - INFO - ✅ Sauvegardé: Google-Search/info_tech_001 (352ms, 10 sources)
+2025-07-21 13:59:20,010 - src.runner - INFO - 🔍 [11/30] Requête 'Trouver les meilleurs hôtels à Rome pour un week-e...' → GPT-4o
+2025-07-21 13:59:30,926 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-21 13:59:30,932 - src.runner - INFO - ✅ Sauvegardé: GPT-4o/transac_voyage_001 (10917ms, 0 sources)
+2025-07-21 13:59:30,932 - src.runner - INFO - 🔍 [12/30] Requête 'Trouver les meilleurs hôtels à Rome pour un week-e...' → Google-Search
+2025-07-21 13:59:31,669 - src.runner - INFO - ✅ Sauvegardé: Google-Search/transac_voyage_001 (730ms, 10 sources)
+2025-07-21 13:59:36,674 - src.runner - INFO - 🔄 Itération 3/5
+2025-07-21 13:59:36,675 - src.runner - INFO - 🔍 [13/30] Requête 'Quels sont les symptômes et les traitements de la ...' → GPT-4o
+2025-07-21 13:59:49,328 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-21 13:59:49,341 - src.runner - INFO - ✅ Sauvegardé: GPT-4o/info_sante_001 (12661ms, 0 sources)
+2025-07-21 13:59:49,341 - src.runner - INFO - 🔍 [14/30] Requête 'Quels sont les symptômes et les traitements de la ...' → Google-Search
+2025-07-21 13:59:49,604 - src.runner - INFO - ✅ Sauvegardé: Google-Search/info_sante_001 (257ms, 10 sources)
+2025-07-21 13:59:54,607 - src.runner - INFO - 🔍 [15/30] Requête 'Trouver les meilleurs hôtels à Rome pour un week-e...' → GPT-4o
+2025-07-21 14:00:05,319 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-21 14:00:05,325 - src.runner - INFO - ✅ Sauvegardé: GPT-4o/transac_voyage_001 (10713ms, 0 sources)
+2025-07-21 14:00:05,326 - src.runner - INFO - 🔍 [16/30] Requête 'Trouver les meilleurs hôtels à Rome pour un week-e...' → Google-Search
+2025-07-21 14:00:05,992 - src.runner - INFO - ✅ Sauvegardé: Google-Search/transac_voyage_001 (661ms, 10 sources)
+2025-07-21 14:00:10,997 - src.runner - INFO - 🔍 [17/30] Requête 'Explique le fonctionnement des transformeurs dans ...' → GPT-4o
+2025-07-21 14:00:27,215 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-21 14:00:27,221 - src.runner - INFO - ✅ Sauvegardé: GPT-4o/info_tech_001 (16219ms, 0 sources)
+2025-07-21 14:00:27,221 - src.runner - INFO - 🔍 [18/30] Requête 'Explique le fonctionnement des transformeurs dans ...' → Google-Search
+2025-07-21 14:00:27,495 - src.runner - INFO - ✅ Sauvegardé: Google-Search/info_tech_001 (268ms, 10 sources)
+2025-07-21 14:00:32,503 - src.runner - INFO - 🔄 Itération 4/5
+2025-07-21 14:00:32,503 - src.runner - INFO - 🔍 [19/30] Requête 'Explique le fonctionnement des transformeurs dans ...' → GPT-4o
+2025-07-21 14:00:49,081 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-21 14:00:49,089 - src.runner - INFO - ✅ Sauvegardé: GPT-4o/info_tech_001 (16579ms, 0 sources)
+2025-07-21 14:00:49,089 - src.runner - INFO - 🔍 [20/30] Requête 'Explique le fonctionnement des transformeurs dans ...' → Google-Search
+2025-07-21 14:00:49,336 - src.runner - INFO - ✅ Sauvegardé: Google-Search/info_tech_001 (241ms, 10 sources)
+2025-07-21 14:00:54,341 - src.runner - INFO - 🔍 [21/30] Requête 'Quels sont les symptômes et les traitements de la ...' → GPT-4o
+2025-07-21 14:01:05,488 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-21 14:01:05,495 - src.runner - INFO - ✅ Sauvegardé: GPT-4o/info_sante_001 (11148ms, 0 sources)
+2025-07-21 14:01:05,495 - src.runner - INFO - 🔍 [22/30] Requête 'Quels sont les symptômes et les traitements de la ...' → Google-Search
+2025-07-21 14:01:05,882 - src.runner - INFO - ✅ Sauvegardé: Google-Search/info_sante_001 (381ms, 10 sources)
+2025-07-21 14:01:10,887 - src.runner - INFO - 🔍 [23/30] Requête 'Trouver les meilleurs hôtels à Rome pour un week-e...' → GPT-4o
+2025-07-21 14:01:23,252 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-21 14:01:23,258 - src.runner - INFO - ✅ Sauvegardé: GPT-4o/transac_voyage_001 (12366ms, 0 sources)
+2025-07-21 14:01:23,259 - src.runner - INFO - 🔍 [24/30] Requête 'Trouver les meilleurs hôtels à Rome pour un week-e...' → Google-Search
+2025-07-21 14:01:23,799 - src.runner - INFO - ✅ Sauvegardé: Google-Search/transac_voyage_001 (535ms, 10 sources)
+2025-07-21 14:01:28,804 - src.runner - INFO - 🔄 Itération 5/5
+2025-07-21 14:01:28,806 - src.runner - INFO - 🔍 [25/30] Requête 'Explique le fonctionnement des transformeurs dans ...' → GPT-4o
+2025-07-21 14:01:47,059 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-21 14:01:47,065 - src.runner - INFO - ✅ Sauvegardé: GPT-4o/info_tech_001 (18255ms, 0 sources)
+2025-07-21 14:01:47,066 - src.runner - INFO - 🔍 [26/30] Requête 'Explique le fonctionnement des transformeurs dans ...' → Google-Search
+2025-07-21 14:01:47,493 - src.runner - INFO - ✅ Sauvegardé: Google-Search/info_tech_001 (422ms, 10 sources)
+2025-07-21 14:01:52,499 - src.runner - INFO - 🔍 [27/30] Requête 'Quels sont les symptômes et les traitements de la ...' → GPT-4o
+2025-07-21 14:02:03,997 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-21 14:02:04,003 - src.runner - INFO - ✅ Sauvegardé: GPT-4o/info_sante_001 (11499ms, 0 sources)
+2025-07-21 14:02:04,004 - src.runner - INFO - 🔍 [28/30] Requête 'Quels sont les symptômes et les traitements de la ...' → Google-Search
+2025-07-21 14:02:04,267 - src.runner - INFO - ✅ Sauvegardé: Google-Search/info_sante_001 (258ms, 10 sources)
+2025-07-21 14:02:09,272 - src.runner - INFO - 🔍 [29/30] Requête 'Trouver les meilleurs hôtels à Rome pour un week-e...' → GPT-4o
+2025-07-21 14:02:15,603 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-21 14:02:15,613 - src.runner - INFO - ✅ Sauvegardé: GPT-4o/transac_voyage_001 (6334ms, 0 sources)
+2025-07-21 14:02:15,613 - src.runner - INFO - 🔍 [30/30] Requête 'Trouver les meilleurs hôtels à Rome pour un week-e...' → Google-Search
+2025-07-21 14:02:15,943 - src.runner - INFO - ✅ Sauvegardé: Google-Search/transac_voyage_001 (324ms, 10 sources)
+2025-07-21 14:02:20,948 - src.runner - INFO - 🎉 Expérimentation 'Analyse_Referencement_Sources_2024' terminée. 30/30 opérations réalisées.
