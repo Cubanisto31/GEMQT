@@ -1,0 +1,26 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run Experiment (PowerShell)",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"-m",
+				"src.main",
+				"run"
+			],
+			"group": "build",
+			"isBackground": false,
+			"problemMatcher": [],
+			"options": {
+				"shell": {
+					"executable": "powershell.exe",
+					"args": [
+						"-Command"
+					]
+				}
+			}
+		}
+	]
+}

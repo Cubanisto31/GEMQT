@@ -1,0 +1,12 @@
+pyyaml
+pydantic
+sqlalchemy
+aiohttp
+asyncio
+typer[all]
+openai
+anthropic
+pandas
+jupyter
+matplotlib
+seaborn
