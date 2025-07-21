@@ -24,12 +24,11 @@ Ce projet fournit un framework complet pour mener des expérimentations à grand
 └── README.md
 ```
 
-*Tips perso*
-Pour run le programme :
-- assure toi de bien exporté les API keys avec les commandes indiqués dans le fichier API KEY v1
+*Note*
+On a réussi grâce à claude code, à faire tourner le code et l'on est en mesure d'analyser les résultats. Toutefois il va falloir maintenant demandé à Claude code d'ajouter les réponses complètes aux requêtes (que je n'arrive pas encore à trouver).
 
-- utilise la commande python -m src.main (dans une invite powershell) dans le dossier testACv1
+Il va falloir également que l'on ajoute les autres modèles (il va falloir doucement se poser sur la question du prix de l'exp)
 
+Il faudra aussi refaire une passe sur les requêtes testées
 
-Reprendre en regardant les nouveaux resultats et en fonction demander pourquoi les llm ne montrent pas les résultats
-
+Il faut vérifier si le code tourne tous les jours comme prévu dans le Yaml ou pas (mais ça m'étonnerait)
