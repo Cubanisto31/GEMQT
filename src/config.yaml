@@ -1,7 +1,7 @@
 experiment_name: "Analyse_Referencement_Sources_2024"
 
 duration_days: 1
-iterations_per_query: 5
+iterations_per_query: 2
 delay_between_iterations_seconds: 5
 randomize_query_order: true
 use_different_sessions: true
@@ -21,10 +21,10 @@ models:
   - name: "Claude-3-Sonnet"
     type: "llm"
     client: "claude"
-    enabled: false  # Désactivé car pas de clé ANTHROPIC_API_KEY
+    enabled: true
     api_key_env_var: "ANTHROPIC_API_KEY"
     parameters:
-      model_name: "claude-3-sonnet-20240229"
+      model_name: "claude-3-5-sonnet-20241022"
       temperature: 0.7
       max_tokens: 4000
 
@@ -36,6 +36,35 @@ models:
     search_engine_id_env_var: "GOOGLE_CX"
     parameters:
       num_results: 10
+
+  - name: "Bing-Search"
+    type: "search_engine"
+    client: "bing_search"
+    enabled: false  # Désactivé par défaut - activez après avoir obtenu une clé API
+    api_key_env_var: "BING_API_KEY"
+    parameters:
+      num_results: 10
+
+  - name: "Gemini-Pro"
+    type: "llm"
+    client: "gemini"
+    enabled: true
+    api_key_env_var: "GEMINI_API_KEY"
+    parameters:
+      model_name: "gemini-1.5-flash"
+      temperature: 0.7
+      max_tokens: 4000
+
+  - name: "Perplexity-Online"
+    type: "llm"
+    client: "perplexity"
+    enabled: false  # Désactivé par défaut - activez après avoir obtenu une clé API
+    api_key_env_var: "PERPLEXITY_API_KEY"
+    parameters:
+      model_name: "pplx-70b-online"  # Utilise le modèle 70B avec recherche web
+      temperature: 0.7
+      max_tokens: 4000
+      search_recency_filter: "week"  # Filtre pour les résultats récents
 
 queries:
   - id: "info_sante_001"

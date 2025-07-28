@@ -1,6 +1,10 @@
 import asyncio
 import typer
 from pathlib import Path
+from dotenv import load_dotenv
+
+# Charger les variables d'environnement
+load_dotenv()
 
 from src.config import ExperimentConfig
 from src.database import initialize_database

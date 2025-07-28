@@ -1,0 +1,13 @@
+model_name,query_id,query_category,response_length_mean,response_length_std,response_length_min,response_length_max,response_time_ms_mean,response_time_ms_std,response_time_ms_min,response_time_ms_max,sources_count_mean,sources_count_sum,sources_count_max,has_sources_sum,has_sources_count,id_count,sources_percentage
+Claude-3-Sonnet,info_sante_001,Informationnelle - Santé,301.33,454.37,39,826,1723.67,2985.48,0,5171,0.0,0,0,0,3,3,0.0
+Claude-3-Sonnet,info_tech_001,Informationnelle - Technique,354.33,546.17,39,985,3497.33,6057.56,0,10492,0.0,0,0,0,3,3,0.0
+Claude-3-Sonnet,transac_voyage_001,Transactionnelle - Voyage,407.0,425.42,39,800,2697.25,3116.04,0,5514,0.0,0,0,0,4,4,0.0
+GPT-4o,info_sante_001,Informationnelle - Santé,1656.12,1017.64,36,2501,8174.0,5152.42,0,12661,0.0,0,0,0,8,8,0.0
+GPT-4o,info_tech_001,Informationnelle - Technique,2229.88,1375.88,36,3431,11308.38,7232.33,0,18255,0.0,0,0,0,8,8,0.0
+GPT-4o,transac_voyage_001,Transactionnelle - Voyage,1460.89,846.57,36,2208,7151.56,4510.63,0,12366,0.0,0,0,0,9,9,0.0
+Gemini-Pro,info_sante_001,Informationnelle - Santé,1192.33,1945.67,69,3439,2762.67,4785.08,0,8288,0.0,0,0,0,3,3,0.0
+Gemini-Pro,info_tech_001,Informationnelle - Technique,1218.0,1990.13,69,3516,1924.0,3332.47,0,5772,0.0,0,0,0,3,3,0.0
+Gemini-Pro,transac_voyage_001,Transactionnelle - Voyage,1328.5,1461.19,69,2761,2928.5,3615.78,0,7425,0.0,0,0,0,4,4,0.0
+Google-Search,info_sante_001,Informationnelle - Santé,22912.0,14126.7,36,30757,243.12,168.35,0,478,7.5,60,10,6,8,8,75.0
+Google-Search,info_tech_001,Informationnelle - Technique,25564.88,15757.97,36,34169,262.12,175.12,0,431,7.5,60,10,6,8,8,75.0
+Google-Search,transac_voyage_001,Transactionnelle - Voyage,41052.67,23257.41,36,53138,461.11,287.16,0,730,7.78,70,10,7,9,9,77.78
