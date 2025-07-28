@@ -78,6 +78,14 @@ python -m src.main run --config mon_config.yaml
 
 ## Prochaines étapes
 
+- Bien regarder et travailler sur la doc 
+- Vérifier les datas que l'on obtient en sortie 
+- Il manque toujours la clé de Bing 
+- Faire attention aux crédits sur les différentes clés API
+- Commencer à faire une première analyse sur un test
+
+Ensuite on verra pour :
+
 - [ ] Système d'automatisation temporelle (planification des exécutions)
 - [ ] Intégration Microsoft Copilot
 - [ ] Amélioration du pool de requêtes
