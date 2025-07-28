@@ -104,3 +104,97 @@
 2025-07-28 13:41:28,293 - src.runner - INFO - 🔍 [16/24] Requête 'Trouver les meilleurs hôtels à Rome pour un week-e...' → Gemini-Pro
 2025-07-28 13:41:32,588 - src.runner - INFO - ✅ Sauvegardé: Gemini-Pro/transac_voyage_001 (4289ms, 0 sources)
 2025-07-28 13:41:37,589 - src.runner - INFO - 🔍 [17/24] Requête 'Explique le fonctionnement des transformeurs dans ...' → GPT-4o
+2025-07-28 14:18:18,775 - src.runner - INFO - ✅ Client GPT-4o initialisé avec succès
+2025-07-28 14:18:18,809 - src.runner - INFO - ✅ Client Claude-3-Sonnet initialisé avec succès
+2025-07-28 14:18:18,809 - src.runner - INFO - ✅ Client Google-Search initialisé avec succès
+2025-07-28 14:18:18,809 - src.runner - INFO - ✅ Client Gemini-Pro initialisé avec succès
+2025-07-28 14:18:18,809 - src.runner - ERROR - ❌ Erreur lors de l'initialisation du client Perplexity-Online: Can't instantiate abstract class PerplexityClient without an implementation for abstract method '_extract_sources'
+2025-07-28 14:18:18,810 - src.runner - INFO - 📊 4/5 clients initialisés
+2025-07-28 14:18:18,810 - src.runner - INFO - 🚀 Démarrage de l'expérimentation 'Analyse_Referencement_Sources_2024' avec la session d0e74703-e1eb-4f71-9de1-480174370ff2
+2025-07-28 14:18:18,810 - src.runner - INFO - 🔄 Itération 1/2
+2025-07-28 14:18:18,810 - src.runner - INFO - 🔍 [1/24] Requête 'Explique le fonctionnement des transformeurs dans ...' → GPT-4o
+2025-07-28 14:18:29,786 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 502 Bad Gateway"
+2025-07-28 14:18:29,787 - openai._base_client - INFO - Retrying request to /chat/completions in 0.438842 seconds
+2025-07-28 14:18:45,320 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-28 14:18:45,334 - src.runner - INFO - ✅ Sauvegardé: GPT-4o/info_tech_001 (26514ms, 0 sources)
+2025-07-28 14:18:45,335 - src.runner - INFO - 🔍 [2/24] Requête 'Explique le fonctionnement des transformeurs dans ...' → Claude-3-Sonnet
+2025-07-28 14:18:51,919 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-28 14:18:51,930 - src.runner - INFO - ✅ Sauvegardé: Claude-3-Sonnet/info_tech_001 (6590ms, 0 sources)
+2025-07-28 14:18:51,930 - src.runner - INFO - 🔍 [3/24] Requête 'Explique le fonctionnement des transformeurs dans ...' → Google-Search
+2025-07-28 14:18:52,424 - src.runner - INFO - ✅ Sauvegardé: Google-Search/info_tech_001 (488ms, 10 sources)
+2025-07-28 14:18:52,424 - src.runner - INFO - 🔍 [4/24] Requête 'Explique le fonctionnement des transformeurs dans ...' → Gemini-Pro
+2025-07-28 14:18:58,829 - src.runner - INFO - ✅ Sauvegardé: Gemini-Pro/info_tech_001 (6396ms, 0 sources)
+2025-07-28 14:19:03,834 - src.runner - INFO - 🔍 [5/24] Requête 'Quels sont les symptômes et les traitements de la ...' → GPT-4o
+2025-07-28 14:19:14,552 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-28 14:19:14,559 - src.runner - INFO - ✅ Sauvegardé: GPT-4o/info_sante_001 (10719ms, 0 sources)
+2025-07-28 14:19:14,559 - src.runner - INFO - 🔍 [6/24] Requête 'Quels sont les symptômes et les traitements de la ...' → Claude-3-Sonnet
+2025-07-28 14:19:19,993 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-28 14:19:20,000 - src.runner - INFO - ✅ Sauvegardé: Claude-3-Sonnet/info_sante_001 (5435ms, 0 sources)
+2025-07-28 14:19:20,000 - src.runner - INFO - 🔍 [7/24] Requête 'Quels sont les symptômes et les traitements de la ...' → Google-Search
+2025-07-28 14:19:20,406 - src.runner - INFO - ✅ Sauvegardé: Google-Search/info_sante_001 (400ms, 10 sources)
+2025-07-28 14:19:20,406 - src.runner - INFO - 🔍 [8/24] Requête 'Quels sont les symptômes et les traitements de la ...' → Gemini-Pro
+2025-07-28 14:19:26,496 - src.runner - INFO - ✅ Sauvegardé: Gemini-Pro/info_sante_001 (6085ms, 0 sources)
+2025-07-28 14:19:31,502 - src.runner - INFO - 🔍 [9/24] Requête 'Trouver les meilleurs hôtels à Rome pour un week-e...' → GPT-4o
+2025-07-28 14:19:40,059 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-28 14:19:40,072 - src.runner - INFO - ✅ Sauvegardé: GPT-4o/transac_voyage_001 (8564ms, 0 sources)
+2025-07-28 14:19:40,072 - src.runner - INFO - 🔍 [10/24] Requête 'Trouver les meilleurs hôtels à Rome pour un week-e...' → Claude-3-Sonnet
+2025-07-28 14:19:46,792 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-28 14:19:46,798 - src.runner - INFO - ✅ Sauvegardé: Claude-3-Sonnet/transac_voyage_001 (6721ms, 0 sources)
+2025-07-28 14:19:46,798 - src.runner - INFO - 🔍 [11/24] Requête 'Trouver les meilleurs hôtels à Rome pour un week-e...' → Google-Search
+2025-07-28 14:19:47,319 - src.runner - INFO - ✅ Sauvegardé: Google-Search/transac_voyage_001 (516ms, 10 sources)
+2025-07-28 14:19:47,320 - src.runner - INFO - 🔍 [12/24] Requête 'Trouver les meilleurs hôtels à Rome pour un week-e...' → Gemini-Pro
+2025-07-28 14:19:57,070 - src.runner - INFO - ✅ Sauvegardé: Gemini-Pro/transac_voyage_001 (9744ms, 0 sources)
+2025-07-28 14:20:02,075 - src.runner - INFO - 🔄 Itération 2/2
+2025-07-28 14:20:02,075 - src.runner - INFO - 🔍 [13/24] Requête 'Trouver les meilleurs hôtels à Rome pour un week-e...' → GPT-4o
+2025-07-28 14:20:11,990 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-28 14:20:11,999 - src.runner - INFO - ✅ Sauvegardé: GPT-4o/transac_voyage_001 (9917ms, 0 sources)
+2025-07-28 14:20:11,999 - src.runner - INFO - 🔍 [14/24] Requête 'Trouver les meilleurs hôtels à Rome pour un week-e...' → Claude-3-Sonnet
+2025-07-28 14:20:17,007 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-28 14:20:17,012 - src.runner - INFO - ✅ Sauvegardé: Claude-3-Sonnet/transac_voyage_001 (5009ms, 0 sources)
+2025-07-28 14:20:17,012 - src.runner - INFO - 🔍 [15/24] Requête 'Trouver les meilleurs hôtels à Rome pour un week-e...' → Google-Search
+2025-07-28 14:20:17,615 - src.runner - INFO - ✅ Sauvegardé: Google-Search/transac_voyage_001 (597ms, 10 sources)
+2025-07-28 14:20:17,615 - src.runner - INFO - 🔍 [16/24] Requête 'Trouver les meilleurs hôtels à Rome pour un week-e...' → Gemini-Pro
+2025-07-28 14:23:23,372 - src.runner - INFO - ✅ Client GPT-4o initialisé avec succès
+2025-07-28 14:23:23,398 - src.runner - INFO - ✅ Client Claude-3-Sonnet initialisé avec succès
+2025-07-28 14:23:23,399 - src.runner - INFO - ✅ Client Google-Search initialisé avec succès
+2025-07-28 14:23:23,399 - src.runner - INFO - ✅ Client Gemini-Pro initialisé avec succès
+2025-07-28 14:23:23,399 - src.runner - INFO - ✅ Client Perplexity-Online initialisé avec succès
+2025-07-28 14:23:23,399 - src.runner - INFO - 📊 5/5 clients initialisés
+2025-07-28 14:23:23,400 - src.runner - INFO - 🚀 Démarrage de l'expérimentation 'Analyse_Referencement_Sources_2024' avec la session 925d688b-369f-4ddf-9af3-b69eeba7a464
+2025-07-28 14:23:23,400 - src.runner - INFO - 🔄 Itération 1/1
+2025-07-28 14:23:23,400 - src.runner - INFO - 🔍 [1/15] Requête 'Trouver les meilleurs hôtels à Rome pour un week-e...' → GPT-4o
+2025-07-28 14:23:31,924 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-28 14:23:31,937 - src.runner - INFO - ✅ Sauvegardé: GPT-4o/transac_voyage_001 (8528ms, 0 sources)
+2025-07-28 14:23:31,937 - src.runner - INFO - 🔍 [2/15] Requête 'Trouver les meilleurs hôtels à Rome pour un week-e...' → Claude-3-Sonnet
+2025-07-28 14:23:41,546 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-28 14:23:41,558 - src.runner - INFO - ✅ Sauvegardé: Claude-3-Sonnet/transac_voyage_001 (9614ms, 0 sources)
+2025-07-28 14:23:41,558 - src.runner - INFO - 🔍 [3/15] Requête 'Trouver les meilleurs hôtels à Rome pour un week-e...' → Google-Search
+2025-07-28 14:23:41,970 - src.runner - INFO - ✅ Sauvegardé: Google-Search/transac_voyage_001 (406ms, 10 sources)
+2025-07-28 14:23:41,970 - src.runner - INFO - 🔍 [4/15] Requête 'Trouver les meilleurs hôtels à Rome pour un week-e...' → Gemini-Pro
+2025-07-28 14:23:47,587 - src.runner - INFO - ✅ Sauvegardé: Gemini-Pro/transac_voyage_001 (5611ms, 0 sources)
+2025-07-28 14:23:47,588 - src.runner - INFO - 🔍 [5/15] Requête 'Trouver les meilleurs hôtels à Rome pour un week-e...' → Perplexity-Online
+2025-07-28 14:23:52,918 - src.runner - INFO - ✅ Sauvegardé: Perplexity-Online/transac_voyage_001 (5324ms, 6 sources)
+2025-07-28 14:23:57,924 - src.runner - INFO - 🔍 [6/15] Requête 'Quels sont les symptômes et les traitements de la ...' → GPT-4o
+2025-07-28 14:24:26,592 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-28 14:24:26,602 - src.runner - INFO - ✅ Sauvegardé: GPT-4o/info_sante_001 (28672ms, 0 sources)
+2025-07-28 14:24:26,602 - src.runner - INFO - 🔍 [7/15] Requête 'Quels sont les symptômes et les traitements de la ...' → Claude-3-Sonnet
+2025-07-28 14:24:32,985 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-28 14:24:32,991 - src.runner - INFO - ✅ Sauvegardé: Claude-3-Sonnet/info_sante_001 (6384ms, 0 sources)
+2025-07-28 14:24:32,991 - src.runner - INFO - 🔍 [8/15] Requête 'Quels sont les symptômes et les traitements de la ...' → Google-Search
+2025-07-28 14:24:33,254 - src.runner - INFO - ✅ Sauvegardé: Google-Search/info_sante_001 (257ms, 10 sources)
+2025-07-28 14:24:33,254 - src.runner - INFO - 🔍 [9/15] Requête 'Quels sont les symptômes et les traitements de la ...' → Gemini-Pro
+2025-07-28 14:24:39,457 - src.runner - INFO - ✅ Sauvegardé: Gemini-Pro/info_sante_001 (6198ms, 0 sources)
+2025-07-28 14:24:39,458 - src.runner - INFO - 🔍 [10/15] Requête 'Quels sont les symptômes et les traitements de la ...' → Perplexity-Online
+2025-07-28 14:24:46,586 - src.runner - INFO - ✅ Sauvegardé: Perplexity-Online/info_sante_001 (7123ms, 13 sources)
+2025-07-28 14:24:51,591 - src.runner - INFO - 🔍 [11/15] Requête 'Explique le fonctionnement des transformeurs dans ...' → GPT-4o
+2025-07-28 14:25:03,013 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-28 14:25:03,020 - src.runner - INFO - ✅ Sauvegardé: GPT-4o/info_tech_001 (11423ms, 0 sources)
+2025-07-28 14:25:03,020 - src.runner - INFO - 🔍 [12/15] Requête 'Explique le fonctionnement des transformeurs dans ...' → Claude-3-Sonnet
+2025-07-28 14:25:10,940 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-07-28 14:25:10,946 - src.runner - INFO - ✅ Sauvegardé: Claude-3-Sonnet/info_tech_001 (7921ms, 0 sources)
+2025-07-28 14:25:10,946 - src.runner - INFO - 🔍 [13/15] Requête 'Explique le fonctionnement des transformeurs dans ...' → Google-Search
+2025-07-28 14:25:11,361 - src.runner - INFO - ✅ Sauvegardé: Google-Search/info_tech_001 (408ms, 10 sources)
+2025-07-28 14:25:11,361 - src.runner - INFO - 🔍 [14/15] Requête 'Explique le fonctionnement des transformeurs dans ...' → Gemini-Pro
+2025-07-28 14:25:17,195 - src.runner - INFO - ✅ Sauvegardé: Gemini-Pro/info_tech_001 (5829ms, 0 sources)
+2025-07-28 14:25:17,195 - src.runner - INFO - 🔍 [15/15] Requête 'Explique le fonctionnement des transformeurs dans ...' → Perplexity-Online
+2025-07-28 14:25:29,649 - src.runner - INFO - ✅ Sauvegardé: Perplexity-Online/info_tech_001 (12449ms, 11 sources)

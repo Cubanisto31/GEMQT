@@ -170,3 +170,7 @@ class PerplexityClient(BaseClient):
                 })
         
         return sources
+    
+    def _extract_sources(self, response_text: str) -> List[Dict[str, Any]]:
+        """Implémentation de la méthode abstraite _extract_sources"""
+        return self._extract_sources_with_citations(response_text, [])

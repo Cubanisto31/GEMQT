@@ -1,0 +1,16 @@
+model_name,query_id,query_category,response_length_mean,response_length_std,response_length_min,response_length_max,response_time_ms_mean,response_time_ms_std,response_time_ms_min,response_time_ms_max,sources_count_mean,sources_count_sum,sources_count_max,has_sources_sum,has_sources_count,id_count,sources_percentage
+Claude-3-Sonnet,info_sante_001,Informationnelle - Santé,534.4,453.2,39,909,3398.0,3134.56,0,6384,0.0,0,0,0,5,5,0.0
+Claude-3-Sonnet,info_tech_001,Informationnelle - Technique,720.4,633.06,39,1296,5000.6,4775.52,0,10492,0.0,0,0,0,5,5,0.0
+Claude-3-Sonnet,transac_voyage_001,Transactionnelle - Voyage,539.43,343.55,39,800,4590.43,3498.01,0,9614,0.0,0,0,0,7,7,0.0
+GPT-4o,info_sante_001,Informationnelle - Santé,1760.0,924.71,36,2501,10478.3,7883.73,0,28672,0.0,0,0,0,10,10,0.0
+GPT-4o,info_tech_001,Informationnelle - Technique,2368.2,1251.09,36,3431,12840.4,7985.4,0,26514,0.0,0,0,0,10,10,0.0
+GPT-4o,transac_voyage_001,Transactionnelle - Voyage,1519.92,736.59,36,2208,7614.42,3951.21,0,12366,0.0,0,0,0,12,12,0.0
+Gemini-Pro,info_sante_001,Informationnelle - Santé,2013.8,1777.19,69,3439,4114.2,3856.82,0,8288,0.0,0,0,0,5,5,0.0
+Gemini-Pro,info_tech_001,Informationnelle - Technique,2121.2,1873.48,69,3516,3599.4,3294.83,0,6396,0.0,0,0,0,5,5,0.0
+Gemini-Pro,transac_voyage_001,Transactionnelle - Voyage,1831.17,1373.85,69,2839,4511.5,3945.46,0,9744,0.0,0,0,0,6,6,0.0
+Google-Search,info_sante_001,Informationnelle - Santé,24217.4,12758.91,36,30757,260.2,156.44,0,478,8.0,80,10,8,10,10,80.0
+Google-Search,info_tech_001,Informationnelle - Technique,27172.4,14304.47,36,34169,299.3,174.21,0,488,8.0,80,10,8,10,10,80.0
+Google-Search,transac_voyage_001,Transactionnelle - Voyage,44073.83,20573.25,36,53138,472.42,249.12,0,730,8.33,100,10,10,12,12,83.33
+Perplexity-Online,info_sante_001,Informationnelle - Santé,1402.0,,1402,1402,7123.0,,7123,7123,13.0,13,13,1,1,1,100.0
+Perplexity-Online,info_tech_001,Informationnelle - Technique,2229.0,,2229,2229,12449.0,,12449,12449,11.0,11,11,1,1,1,100.0
+Perplexity-Online,transac_voyage_001,Transactionnelle - Voyage,1790.0,,1790,1790,5324.0,,5324,5324,6.0,6,6,1,1,1,100.0

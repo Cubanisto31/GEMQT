@@ -1,7 +1,7 @@
 experiment_name: "Analyse_Referencement_Sources_2024"
 
 duration_days: 1
-iterations_per_query: 2
+iterations_per_query: 1
 delay_between_iterations_seconds: 5
 randomize_query_order: true
 use_different_sessions: true
@@ -58,10 +58,10 @@ models:
   - name: "Perplexity-Online"
     type: "llm"
     client: "perplexity"
-    enabled: false  # Désactivé par défaut - activez après avoir obtenu une clé API
+    enabled: true
     api_key_env_var: "PERPLEXITY_API_KEY"
     parameters:
-      model_name: "pplx-70b-online"  # Utilise le modèle 70B avec recherche web
+      model_name: "sonar"  # Modèle avec recherche web intégrée
       temperature: 0.7
       max_tokens: 4000
       search_recency_filter: "week"  # Filtre pour les résultats récents

@@ -1,6 +1,6 @@
 
 # Script R d'analyse des données d'expérience
-# Généré automatiquement le 2025-07-28 13:46:06
+# Généré automatiquement le 2025-07-28 14:27:46
 
 library(readr)
 library(dplyr)
@@ -8,10 +8,10 @@ library(ggplot2)
 library(tidyr)
 
 # Chargement des données
-main_data <- read_csv("analysis_exports/experiment_data_20250728_134606.csv")
-aggregated_data <- read_csv("analysis_exports/aggregated_data_20250728_134606.csv")
-temporal_data <- read_csv("analysis_exports/temporal_analysis_20250728_134606.csv")
-sources_data <- read_csv("analysis_exports/sources_detail_20250728_134606.csv")
+main_data <- read_csv("analysis_exports/experiment_data_20250728_142745.csv")
+aggregated_data <- read_csv("analysis_exports/aggregated_data_20250728_142745.csv")
+temporal_data <- read_csv("analysis_exports/temporal_analysis_20250728_142745.csv")
+sources_data <- read_csv("analysis_exports/sources_detail_20250728_142745.csv")
 
 # Aperçu des données
 cat("=== APERCU DES DONNEES ===\n")
@@ -67,8 +67,8 @@ query_analysis <- main_data %>%
 print(query_analysis)
 
 # Sauvegarder les graphiques
-ggsave("analysis_plots_20250728_134606.png", 
+ggsave("analysis_plots_20250728_142745.png", 
        gridExtra::grid.arrange(p1, p2, p3, ncol=1), 
        width=12, height=15, dpi=300)
 
-cat("\n✅ Analyse terminée. Graphiques sauvegardés dans analysis_plots_20250728_134606.png\n")
+cat("\n✅ Analyse terminée. Graphiques sauvegardés dans analysis_plots_20250728_142745.png\n")
