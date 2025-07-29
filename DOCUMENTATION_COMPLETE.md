@@ -39,13 +39,13 @@ Ce système a été conçu pour analyser comment différents agents conversation
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                         Interface CLI                            │
-│                        (src/main.py)                             │
+│                         Interface CLI                           │
+│                        (src/main.py)                            │
 └────────────────────────────┬────────────────────────────────────┘
                              │
 ┌────────────────────────────▼────────────────────────────────────┐
-│                    ExperimentRunner                              │
-│                   (src/runner.py)                                │
+│                    ExperimentRunner                             │
+│                   (src/runner.py)                               │
 │  • Orchestration des requêtes                                   │
 │  • Gestion des sessions et itérations                           │
 │  • Coordination des clients                                     │
