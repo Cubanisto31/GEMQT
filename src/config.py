@@ -1,5 +1,6 @@
 from pydantic import BaseModel, Field, FilePath
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, Optional, Union
+from pathlib import Path
 
 
 class QueryConfig(BaseModel):
@@ -36,8 +37,15 @@ class ExperimentConfig(BaseModel):
     queries: List[QueryConfig]
 
     @classmethod
-    def from_yaml(cls, path: str) -> 'ExperimentConfig':
+    def from_yaml(cls, path: str, queries_file: Optional[Union[str, Path]] = None) -> 'ExperimentConfig':
         import yaml
+        from .query_loader import QueryLoader
+        
         with open(path, 'r', encoding='utf-8') as f:
             data = yaml.safe_load(f)
+        
+        # Si un fichier de requêtes externe est spécifié, l'utiliser
+        if queries_file:
+            data['queries'] = [query.dict() for query in QueryLoader.load_queries(path, queries_file)]
+        
         return cls(**data)
