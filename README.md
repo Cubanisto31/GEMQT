@@ -4,6 +4,9 @@ Ce projet fournit un framework complet pour mener des expérimentations à grand
 
 ## Nouveautés 🎉
 
+### ✅ Support des fichiers de requêtes externes
+Les requêtes peuvent maintenant être chargées depuis un fichier Excel ou CSV externe, évitant de modifier le fichier de configuration YAML.
+
 ### ✅ Réponses complètes sauvegardées
 Les réponses complètes sont désormais sauvegardées dans le champ `response_raw` de la base de données.
 
@@ -33,11 +36,15 @@ Consultez [API_SETUP_GUIDE.md](API_SETUP_GUIDE.md) pour des instructions détail
 │   ├── __init__.py
 │   ├── config.py
 │   ├── config.yaml
+│   ├── config_without_queries.yaml  # Config sans requêtes intégrées
+│   ├── query_loader.py             # Chargement des requêtes externes
 │   ├── database.py
 │   ├── runner.py
 │   └── main.py
 ├── API_SETUP_GUIDE.md
 ├── CLAUDE.md
+├── queries_pool_v1.xlsx           # Pool de requêtes Excel existant
+├── queries_pool_example.csv       # Exemple de fichier CSV
 ├── requirements.txt
 └── README.md
 ```
@@ -74,6 +81,36 @@ python -m src.main run
 ### Avec configuration personnalisée
 ```bash
 python -m src.main run --config mon_config.yaml
+```
+
+### Avec fichier de requêtes externe
+Le système supporte maintenant le chargement des requêtes depuis un fichier externe (Excel ou CSV) :
+
+```bash
+# Avec un fichier Excel
+python -m src.main run --queries queries_pool_v1.xlsx
+
+# Avec un fichier CSV
+python -m src.main run --queries queries_pool_example.csv
+
+# Avec une configuration personnalisée ET un fichier de requêtes externe
+python -m src.main run --config src/config_without_queries.yaml --queries queries_pool_v1.xlsx
+```
+
+#### Format du fichier de requêtes
+
+Le fichier Excel ou CSV doit contenir au minimum les colonnes suivantes :
+- **id** : Identifiant unique de la requête
+- **text** : Texte de la requête
+- **category** : Catégorie de la requête (ex: "Informationnelle - Santé", "Transactionnelle - Voyage", etc.)
+
+Les colonnes supplémentaires seront automatiquement ajoutées comme métadonnées. Exemple de fichier CSV :
+
+```csv
+id,text,category,complexité,domaine,intention
+info_sante_001,"Quels sont les symptômes de la grippe ?","Informationnelle - Santé",faible,santé,
+info_tech_001,"Explique le fonctionnement des transformeurs dans GPT.","Informationnelle - Technique",élevée,technologie,
+transac_voyage_001,"Trouver les meilleurs hôtels à Rome.","Transactionnelle - Voyage",,tourisme,réservation
 ```
 
 ## Prochaines étapes

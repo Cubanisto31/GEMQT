@@ -22,25 +22,33 @@ L'expérience suit cette structure :
 ## Tâches prioritaires à accomplir
 
 ### 1. Amélioration de la collecte de données
-- [ ] **Ajouter les réponses complètes** aux requêtes dans le fichier de sortie (pas seulement les sources citées)
-- [ ] Stocker la réponse textuelle intégrale de chaque agent conversationnel
-- [ ] Conserver les métadonnées : timestamp, modèle utilisé, paramètres, etc.
-- [ ] Implémenter un système de sauvegarde robuste avec gestion d'erreurs
+- [x] **Ajouter les réponses complètes** aux requêtes dans le fichier de sortie (pas seulement les sources citées)
+- [x] Stocker la réponse textuelle intégrale de chaque agent conversationnel
+- [x] Conserver les métadonnées : timestamp, modèle utilisé, paramètres, etc.
+- [x] Implémenter un système de sauvegarde robuste avec gestion d'erreurs
 
 ### 2. Extension des modèles et moteurs
-- [ ] **Ajouter d'autres modèles** :
-  - OpenAI GPT-4 (déjà implémenté ?)
-  - Claude (Anthropic)
-  - Gemini (Google)
-  - Perplexity AI
-  - Microsoft Copilot
-- [ ] **Ajouter d'autres moteurs de recherche** :
-  - Bing Search API (priorité)
-  - DuckDuckGo
-  - Yahoo Search
-- [ ] **Aide pour les clés API** : Guider l'utilisateur dans l'obtention des clés nécessaires
+- [x] **Ajouter d'autres modèles** :
+  - [x] OpenAI GPT-4
+  - [x] Claude (Anthropic)
+  - [x] Gemini (Google)
+  - [x] Perplexity AI
+  - [ ] Microsoft Copilot
+- [x] **Ajouter d'autres moteurs de recherche** :
+  - [x] Bing Search API (implémenté mais nécessite clé)
+  - [ ] DuckDuckGo
+  - [ ] Yahoo Search
+- [x] **Aide pour les clés API** : Guide créé dans API_SETUP_GUIDE.md
 
-### 3. Automatisation temporelle
+### 3. Gestion des requêtes externes
+- [x] **Module de chargement des requêtes** depuis fichiers externes (Excel, CSV)
+- [x] **Support des fichiers Excel** (.xlsx, .xls) avec lecture via pandas/openpyxl
+- [x] **Support des fichiers CSV** avec gestion des métadonnées
+- [x] **Interface CLI** pour spécifier le fichier de requêtes (option --queries)
+- [x] **Validation des formats** avec colonnes obligatoires (id, text, category)
+- [x] **Compatibilité** avec l'ancien système (requêtes dans config.yaml)
+
+### 4. Automatisation temporelle
 - [ ] **Système de planification** pour exécuter les requêtes sur plusieurs jours
 - [ ] Configuration des intervalles de temps (quotidien, hebdomadaire, etc.)
 - [ ] Gestion de la persistance des données entre les sessions
@@ -107,10 +115,31 @@ k(qi) = |Sf(qi) ∩ Sg(qi)| / |Sf(qi) ∪ Sg(qi)|
 
 ## Priorités immédiates
 
-1. **URGENT** : Sauvegarder les réponses complètes (pas seulement les sources)
-2. **IMPORTANT** : Ajouter Bing Search API avec guide d'obtention de clé
-3. **IMPORTANT** : Ajouter Claude et autres modèles avec leurs APIs
-4. **PLANIFICATION** : Système d'automatisation temporelle
+1. [x] **TERMINÉ** : Sauvegarder les réponses complètes (pas seulement les sources)
+2. [x] **TERMINÉ** : Ajouter Bing Search API avec guide d'obtention de clé
+3. [x] **TERMINÉ** : Ajouter Claude et autres modèles avec leurs APIs
+4. [x] **NOUVEAU** : Système de gestion des requêtes externes (Excel/CSV)
+5. **PLANIFICATION** : Système d'automatisation temporelle
+
+## Nouvelles fonctionnalités ajoutées
+
+### Gestion des fichiers de requêtes externes
+- **Fichier créé** : `src/query_loader.py` - Module de chargement des requêtes
+- **Option CLI** : `--queries` ou `-q` pour spécifier un fichier externe
+- **Formats supportés** : Excel (.xlsx, .xls) et CSV
+- **Exemples fournis** : `queries_pool_example.csv` et `src/config_without_queries.yaml`
+
+### Utilisation
+```bash
+# Avec fichier Excel existant
+python -m src.main run --queries queries_pool_v1.xlsx
+
+# Avec fichier CSV
+python -m src.main run --queries queries_pool_example.csv
+
+# Configuration personnalisée + fichier externe
+python -m src.main run --config src/config_without_queries.yaml --queries queries_pool_v1.xlsx
+```
 
 ## Notes techniques
 
