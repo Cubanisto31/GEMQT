@@ -32,7 +32,6 @@ Ce système a été conçu pour analyser comment différents agents conversation
 - Stockage des résultats dans une base SQLite
 - Export vers CSV pour analyse dans R
 - Support de multiples itérations et sessions
-- **Chargement des requêtes depuis fichiers externes (Excel/CSV)**
 
 ---
 
@@ -78,8 +77,6 @@ testACv1/
 │   ├── main.py                   # Point d'entrée CLI
 │   ├── config.py                 # Classes de configuration Pydantic
 │   ├── config.yaml               # Configuration de l'expérience
-│   ├── config_without_queries.yaml # Configuration sans requêtes intégrées
-│   ├── query_loader.py           # Module de chargement des requêtes externes
 │   ├── runner.py                 # Orchestrateur principal
 │   ├── database.py               # Modèles et gestion BDD
 │   ├── utils.py                  # Fonctions utilitaires
@@ -103,8 +100,7 @@ testACv1/
 ├── API_SETUP_GUIDE.md           # Guide d'obtention des clés API
 ├── README.md                     # Documentation générale
 ├── export_to_csv.py             # Script d'export vers CSV
-├── queries_pool_v1.xlsx         # Pool de requêtes d'expérience (Excel)
-└── queries_pool_example.csv     # Exemple de pool de requêtes (CSV)
+└── queries_pool_v1.xlsx         # Pool de requêtes d'expérience
 ```
 
 ---
@@ -140,43 +136,7 @@ queries:
     metadata: { "complexité": "faible" }
 ```
 
-### 4.2 Gestion des requêtes externes
-
-Le système supporte maintenant trois méthodes pour charger les requêtes :
-
-#### A. Requêtes intégrées dans config.yaml (méthode traditionnelle)
-```yaml
-queries:
-  - id: "info_sante_001"
-    text: "Quels sont les symptômes..."
-    category: "Informationnelle - Santé"
-    metadata: { "complexité": "faible" }
-```
-
-#### B. Fichier Excel externe
-Format requis avec colonnes :
-- **id** : Identifiant unique (obligatoire)
-- **text** : Texte de la requête (obligatoire)  
-- **category** : Catégorie (obligatoire)
-- Colonnes supplémentaires optionnelles pour métadonnées
-
-#### C. Fichier CSV externe
-```csv
-id,text,category,complexité,domaine,intention
-info_sante_001,"Quels sont les symptômes de la grippe ?","Informationnelle - Santé",faible,santé,
-info_tech_001,"Comment fonctionnent les transformeurs ?","Informationnelle - Technique",élevée,technologie,
-```
-
-#### Module QueryLoader (src/query_loader.py)
-```python
-# Méthodes disponibles :
-- load_from_excel(file_path) : Charge depuis Excel
-- load_from_csv(file_path) : Charge depuis CSV  
-- load_from_yaml(config_data) : Charge depuis YAML
-- load_queries(config_path, external_file) : Méthode unifiée
-```
-
-### 4.3 Variables d'environnement (.env)
+### 4.2 Variables d'environnement (.env)
 
 ```bash
 # APIs LLM
@@ -201,18 +161,10 @@ BING_API_KEY="..."
 # Fonctionnalités :
 - Chargement des variables d'environnement
 - Parsing de la configuration YAML
-- Support des fichiers de requêtes externes (--queries)
 - Initialisation de la base de données
 - Lancement de l'ExperimentRunner
 - Gestion des erreurs globales
 ```
-
-**Avantages des requêtes externes :**
-- Séparation des données et de la configuration
-- Modification facile dans Excel sans toucher au code
-- Partage simplifié des pools de requêtes
-- Versioning indépendant des requêtes
-- Collaboration facilitée (plusieurs fichiers de requêtes)
 
 ### 5.2 runner.py - Orchestrateur
 
@@ -245,12 +197,12 @@ BING_API_KEY="..."
 **Modèle Result (SQLAlchemy) :**
 ```python
 - id: UUID unique
-- experiment_id: ID de l'expérience
+- experiment_id: ID de l expérience
 - session_id: ID de session
 - query_id: ID de la requête
 - query_text: Texte complet
 - query_category: Catégorie
-- iteration: Numéro d'itération
+- iteration: Numéro d itération
 - model_name: Nom du modèle
 - model_type: llm ou search_engine
 - response_raw: Réponse brute
@@ -417,7 +369,6 @@ CREATE INDEX ix_results_session_id ON results (session_id);
 **Stratégie de retry :**
 - Max 3 tentatives
 - Délai exponentiel (1s, 2s, 4s)
-- Jitter aléatoire
 
 ### 8.3 Métriques collectées
 
@@ -516,23 +467,11 @@ delay_between_iterations_seconds: 5
 ### 10.3 Lancement d'une expérience
 
 ```bash
-# Expérience avec requêtes intégrées dans config.yaml
-python -m src.main run
+# Expérience complète
+python -m src.main
 
-# Avec configuration personnalisée
-python -m src.main run --config my_config.yaml
-
-# Avec fichier de requêtes externe (Excel)
-python -m src.main run --queries queries_pool_v1.xlsx
-
-# Avec fichier de requêtes externe (CSV)  
-python -m src.main run --queries queries_pool_example.csv
-
-# Configuration personnalisée ET fichier externe
-python -m src.main run --config src/config_without_queries.yaml --queries queries_pool_v1.xlsx
-
-# Afficher l'aide pour voir toutes les options
-python -m src.main run --help
+# Avec configuration custom
+python -m src.main --config my_config.yaml
 ```
 
 ### 10.4 Analyse des résultats
@@ -551,27 +490,13 @@ Rscript analysis_script.R
 
 ### 10.5 Ajout de nouvelles requêtes
 
-#### Méthode 1 : Fichier Excel/CSV externe (recommandée)
-```bash
-# 1. Créer ou modifier queries_pool_v1.xlsx dans Excel
-# 2. Ou modifier queries_pool_example.csv dans un éditeur
-# 3. Utiliser --queries lors du lancement
-python -m src.main run --queries mon_fichier_requetes.xlsx
-```
-
-#### Méthode 2 : Modification du config.yaml
+Éditer `config.yaml` :
 ```yaml
 queries:
-  - id: "nouveau_001"  
+  - id: "nouveau_001"
     text: "Ma nouvelle requête..."
     category: "Nouvelle catégorie"
     metadata: { "tag": "valeur" }
-```
-
-#### Méthode 3 : Configuration hybride
-```bash
-# Utiliser config_without_queries.yaml + fichier externe
-python -m src.main run --config src/config_without_queries.yaml --queries mes_requetes.csv
 ```
 
 ### 10.6 Ajout d'un nouveau modèle
