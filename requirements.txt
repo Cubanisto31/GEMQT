@@ -11,3 +11,4 @@ openpyxl
 jupyter
 matplotlib
 seaborn
+python-dotenv

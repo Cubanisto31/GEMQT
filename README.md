@@ -75,12 +75,12 @@ Dans `src/config.yaml`, changez `enabled: false` en `enabled: true` pour les mod
 
 ### Exécution simple
 ```bash
-python -m src.main run
+python -m src.main
 ```
 
 ### Avec configuration personnalisée
 ```bash
-python -m src.main run --config mon_config.yaml
+python -m src.main --config mon_config.yaml
 ```
 
 ### Avec fichier de requêtes externe
@@ -88,13 +88,13 @@ Le système supporte maintenant le chargement des requêtes depuis un fichier ex
 
 ```bash
 # Avec un fichier Excel
-python -m src.main run --queries queries_pool_v1.xlsx
+python -m src.main --queries queries_pool_v1.xlsx
 
 # Avec un fichier CSV
-python -m src.main run --queries queries_pool_example.csv
+python -m src.main --queries queries_pool_example.csv
 
 # Avec une configuration personnalisée ET un fichier de requêtes externe
-python -m src.main run --config src/config_without_queries.yaml --queries queries_pool_v1.xlsx
+python -m src.main --config src/config_without_queries.yaml --queries queries_pool_v1.xlsx
 ```
 
 #### Format du fichier de requêtes

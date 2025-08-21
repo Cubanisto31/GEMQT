@@ -1,0 +1,45 @@
+experiment_name: "Test_Rapide"
+
+duration_days: 1
+iterations_per_query: 1
+delay_between_iterations_seconds: 1
+randomize_query_order: false
+use_different_sessions: true
+database_url: "sqlite:///experiment_results/experiment_data.db"
+
+models:
+  - name: "GPT-4o"
+    type: "llm"
+    client: "openai"
+    enabled: true
+    api_key_env_var: "OPENAI_API_KEY"
+    parameters:
+      model_name: "gpt-4o"
+      temperature: 0.7
+      max_tokens: 1000
+
+  - name: "Claude-3-Sonnet"
+    type: "llm"
+    client: "claude"
+    enabled: true
+    api_key_env_var: "ANTHROPIC_API_KEY"
+    parameters:
+      model_name: "claude-3-5-sonnet-20241022"
+      temperature: 0.7
+      max_tokens: 1000
+
+  - name: "Perplexity-Online"
+    type: "llm"
+    client: "perplexity"
+    enabled: false  # Désactivé temporairement
+    api_key_env_var: "PERPLEXITY_API_KEY"
+    parameters:
+      model_name: "sonar"
+      temperature: 0.7
+      max_tokens: 1000
+
+queries:
+  - id: "test_001"
+    text: "Qu'est-ce que Python ?"
+    category: "Informationnelle"
+    metadata: { "complexité": "faible" }

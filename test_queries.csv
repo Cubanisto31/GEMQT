@@ -1,0 +1,3 @@
+id,text,category,complexité,domaine,intention
+test_001,"Qu'est-ce que Python ?","Informationnelle",faible,technologie,
+test_002,"Site officiel de Python","Navigationnelle",faible,technologie,
