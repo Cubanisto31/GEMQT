@@ -113,6 +113,159 @@ info_tech_001,"Explique le fonctionnement des transformeurs dans GPT.","Informat
 transac_voyage_001,"Trouver les meilleurs hôtels à Rome.","Transactionnelle - Voyage",,tourisme,réservation
 ```
 
+## Base de données et stockage des résultats
+
+### Configuration du fichier de sortie
+
+Le fichier de base de données est configuré dans le fichier `config.yaml` via le paramètre `database_url` :
+
+```yaml
+database_url: "sqlite:///experiment_results/experiment_data.db"
+```
+
+Vous pouvez modifier ce chemin pour :
+- Changer l'emplacement de la base de données
+- Utiliser une base de données différente pour chaque expérimentation
+- Utiliser d'autres systèmes de base de données supportés par SQLAlchemy (PostgreSQL, MySQL, etc.)
+
+Exemple avec PostgreSQL :
+```yaml
+database_url: "postgresql://user:password@localhost/experiment_db"
+```
+
+### Structure de la base de données
+
+La base de données SQLite contient une table `results` avec la structure suivante :
+
+| Champ | Type | Description |
+|-------|------|-------------|
+| **id** | String (PK) | Identifiant unique de chaque résultat |
+| **experiment_id** | String | Nom de l'expérimentation (depuis config.yaml) |
+| **session_id** | String | UUID unique de la session d'exécution |
+| **query_id** | String | Identifiant de la requête |
+| **query_text** | Text | Texte complet de la requête |
+| **query_category** | String | Catégorie de la requête |
+| **iteration** | Integer | Numéro de l'itération (pour les répétitions) |
+| **model_name** | String | Nom du modèle/moteur utilisé |
+| **model_type** | String | Type (llm ou search_engine) |
+| **response_raw** | Text | **Réponse complète** du modèle/moteur |
+| **sources_extracted** | JSON | Sources citées extraites de la réponse |
+| **chain_of_thought** | Text | Raisonnement extrait (si applicable) |
+| **response_time_ms** | Integer | Temps de réponse en millisecondes |
+| **timestamp** | DateTime | Date et heure de l'exécution |
+| **extra_metadata** | JSON | Métadonnées supplémentaires |
+
+### Manipulation des données
+
+#### Accès direct avec SQLite
+
+```bash
+# Ouvrir la base de données
+sqlite3 experiment_results/experiment_data.db
+
+# Commandes SQL utiles
+.tables                          # Lister les tables
+.schema results                  # Voir la structure de la table
+SELECT COUNT(*) FROM results;   # Compter les résultats
+.mode column                     # Affichage en colonnes
+.headers on                      # Afficher les en-têtes
+```
+
+#### Requêtes SQL exemples
+
+```sql
+-- Voir les derniers résultats
+SELECT model_name, query_id, response_time_ms, timestamp 
+FROM results 
+ORDER BY timestamp DESC 
+LIMIT 10;
+
+-- Statistiques par modèle
+SELECT model_name, 
+       COUNT(*) as nb_requetes,
+       AVG(response_time_ms) as temps_moyen_ms,
+       COUNT(DISTINCT query_id) as nb_requetes_uniques
+FROM results 
+GROUP BY model_name;
+
+-- Exporter les réponses complètes pour une requête
+SELECT model_name, response_raw 
+FROM results 
+WHERE query_id = 'info_sante_001';
+
+-- Compter les sources par modèle
+SELECT model_name, 
+       AVG(json_array_length(sources_extracted)) as nb_moyen_sources
+FROM results 
+GROUP BY model_name;
+```
+
+#### Accès avec Python
+
+```python
+import sqlite3
+import pandas as pd
+import json
+
+# Connexion à la base
+conn = sqlite3.connect('experiment_results/experiment_data.db')
+
+# Charger les données dans un DataFrame
+df = pd.read_sql_query("SELECT * FROM results", conn)
+
+# Analyser les réponses
+for index, row in df.iterrows():
+    print(f"Modèle: {row['model_name']}")
+    print(f"Requête: {row['query_text'][:50]}...")
+    print(f"Longueur réponse: {len(row['response_raw'])} caractères")
+    
+    # Analyser les sources
+    sources = json.loads(row['sources_extracted']) if row['sources_extracted'] else []
+    print(f"Nombre de sources: {len(sources)}")
+    print("-" * 50)
+
+# Exporter vers CSV
+df.to_csv('resultats_experimentation.csv', index=False)
+
+conn.close()
+```
+
+#### Scripts d'analyse fournis
+
+Le projet inclut plusieurs scripts pour analyser les données :
+
+- **`export_to_csv.py`** : Exporte les données vers CSV avec agrégations
+- **`analyze_experiment.py`** : Génère des statistiques et graphiques
+- **`quick_data_peek.py`** : Aperçu rapide des derniers résultats
+
+Utilisation :
+```bash
+# Exporter vers CSV
+python export_to_csv.py
+
+# Analyser et créer des graphiques
+python analyze_experiment.py
+
+# Aperçu rapide
+python quick_data_peek.py
+```
+
+### Sauvegarde et archivage
+
+Il est recommandé de :
+1. **Sauvegarder régulièrement** la base de données (le fichier `.db`)
+2. **Créer des copies** avant chaque nouvelle expérimentation majeure
+3. **Exporter vers CSV** pour l'archivage long terme et le partage
+
+```bash
+# Créer une sauvegarde
+cp experiment_results/experiment_data.db experiment_results/backup_$(date +%Y%m%d_%H%M%S).db
+
+# Exporter tout vers CSV
+sqlite3 experiment_results/experiment_data.db ".mode csv" ".headers on" \
+        ".output all_results.csv" "SELECT * FROM results;" ".quit"
+```
+
 ## Prochaines étapes
 
 - Bien regarder et travailler sur la doc 
