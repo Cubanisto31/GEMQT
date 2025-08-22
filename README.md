@@ -2,19 +2,13 @@
 
 Ce projet fournit un framework complet pour mener des expérimentations à grande échelle sur la manière dont les modèles de langage (LLMs) et les moteurs de recherche citent leurs sources. Il est conçu pour être modulaire, extensible et automatisé.
 
-## Nouveautés 🎉
+## Nouveautés 
 
-### ✅ Support des fichiers de requêtes externes
+###  Support des fichiers de requêtes externes
 Les requêtes peuvent maintenant être chargées depuis un fichier Excel ou CSV externe, évitant de modifier le fichier de configuration YAML.
 
-### ✅ Réponses complètes sauvegardées
+###  Réponses complètes sauvegardées
 Les réponses complètes sont désormais sauvegardées dans le champ `response_raw` de la base de données.
-
-### ✅ Nouveaux modèles et moteurs ajoutés
-- **Bing Search API** - Moteur de recherche Microsoft
-- **Google Gemini** - LLM de Google
-- **Perplexity AI** - LLM avec recherche web intégrée
-- **Claude** (déjà implémenté)
 
 ### 📖 Guide d'obtention des clés API
 Consultez [API_SETUP_GUIDE.md](API_SETUP_GUIDE.md) pour des instructions détaillées sur l'obtention des clés API.
@@ -278,8 +272,6 @@ sqlite3 experiment_results/experiment_data.db ".mode csv" ".headers on" \
 
 ## Prochaines étapes
 
-- Bien regarder et travailler sur la doc 
-- Vérifier les datas que l'on obtient en sortie 
 - Il manque toujours la clé de Bing 
 - Faire attention aux crédits sur les différentes clés API
 - Commencer à faire une première analyse sur un test
