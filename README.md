@@ -10,7 +10,7 @@ Les requêtes peuvent maintenant être chargées depuis un fichier Excel ou CSV 
 ###  Réponses complètes sauvegardées
 Les réponses complètes sont désormais sauvegardées dans le champ `response_raw` de la base de données.
 
-### 📖 Guide d'obtention des clés API
+###  Guide d'obtention des clés API
 Consultez [API_SETUP_GUIDE.md](API_SETUP_GUIDE.md) pour des instructions détaillées sur l'obtention des clés API.
 
 ## Structure du Projet
