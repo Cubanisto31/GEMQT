@@ -132,6 +132,16 @@ Exemple avec PostgreSQL :
 ```yaml
 database_url: "postgresql://user:password@localhost/experiment_db"
 ```
+### Nouvelle expérimentation
+
+Si je n'ai pas retiré le fichier de base de données du dossier experiment_results
+
+  # Sauvegarder la base actuelle avec un timestamp
+  mv experiment_results/experiment_data.db experiment_results/experiment_data_backup_$(date +%Y%m%d_%H%M%S).db
+
+  # L'expérimentation créera automatiquement une nouvelle base vide
+  python -m src.main --queries test_queries.csv
+
 
 ### Structure de la base de données
 

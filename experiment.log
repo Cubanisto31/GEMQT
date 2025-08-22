@@ -270,3 +270,29 @@
 2025-08-21 15:20:11,530 - src.runner - INFO - [QUERY] [10/10] Requête 'Qu'est-ce que Python ?...' -> Perplexity-Online
 2025-08-21 15:20:16,979 - src.runner - INFO - [SAVED] Sauvegardé: Perplexity-Online/test_001 (5439ms, 8 sources)
 2025-08-21 15:20:21,988 - src.runner - INFO - [DONE] Expérimentation 'Analyse_Referencement_Sources_2024' terminée. 10/10 opérations réalisées.
+2025-08-22 11:18:43,924 - src.runner - INFO - [OK] Client GPT-4o initialisé avec succès
+2025-08-22 11:18:43,932 - src.runner - INFO - [OK] Client Google-Search initialisé avec succès
+2025-08-22 11:18:43,938 - src.runner - INFO - [OK] Client Gemini-Pro initialisé avec succès
+2025-08-22 11:18:43,938 - src.runner - INFO - [OK] Client Perplexity-Online initialisé avec succès
+2025-08-22 11:18:43,939 - src.runner - INFO - [STATS] 4/4 clients initialisés
+2025-08-22 11:18:43,944 - src.runner - INFO - [START] Démarrage de l'expérimentation 'Analyse_Referencement_Sources_2024' avec la session 09de0da3-9303-457e-b658-b44e8863b79d
+2025-08-22 11:18:43,945 - src.runner - INFO - [ITER] Itération 1/1
+2025-08-22 11:18:43,946 - src.runner - INFO - [QUERY] [1/8] Requête 'Qu'est-ce que Python ?...' -> GPT-4o
+2025-08-22 11:18:48,593 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-22 11:18:48,625 - src.runner - INFO - [SAVED] Sauvegardé: GPT-4o/test_001 (4661ms, 0 sources)
+2025-08-22 11:18:48,625 - src.runner - INFO - [QUERY] [2/8] Requête 'Qu'est-ce que Python ?...' -> Google-Search
+2025-08-22 11:18:49,259 - src.runner - INFO - [SAVED] Sauvegardé: Google-Search/test_001 (621ms, 10 sources)
+2025-08-22 11:18:49,259 - src.runner - INFO - [QUERY] [3/8] Requête 'Qu'est-ce que Python ?...' -> Gemini-Pro
+2025-08-22 11:18:52,185 - src.runner - INFO - [SAVED] Sauvegardé: Gemini-Pro/test_001 (2915ms, 0 sources)
+2025-08-22 11:18:52,189 - src.runner - INFO - [QUERY] [4/8] Requête 'Qu'est-ce que Python ?...' -> Perplexity-Online
+2025-08-22 11:19:02,527 - src.runner - INFO - [SAVED] Sauvegardé: Perplexity-Online/test_001 (10330ms, 12 sources)
+2025-08-22 11:19:07,529 - src.runner - INFO - [QUERY] [5/8] Requête 'Site officiel de Python...' -> GPT-4o
+2025-08-22 11:19:09,069 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-22 11:19:09,080 - src.runner - INFO - [SAVED] Sauvegardé: GPT-4o/test_002 (1543ms, 1 sources)
+2025-08-22 11:19:09,081 - src.runner - INFO - [QUERY] [6/8] Requête 'Site officiel de Python...' -> Google-Search
+2025-08-22 11:19:09,592 - src.runner - INFO - [SAVED] Sauvegardé: Google-Search/test_002 (502ms, 10 sources)
+2025-08-22 11:19:09,593 - src.runner - INFO - [QUERY] [7/8] Requête 'Site officiel de Python...' -> Gemini-Pro
+2025-08-22 11:19:10,209 - src.runner - INFO - [SAVED] Sauvegardé: Gemini-Pro/test_002 (604ms, 1 sources)
+2025-08-22 11:19:10,210 - src.runner - INFO - [QUERY] [8/8] Requête 'Site officiel de Python...' -> Perplexity-Online
+2025-08-22 11:19:18,917 - src.runner - INFO - [SAVED] Sauvegardé: Perplexity-Online/test_002 (8694ms, 3 sources)
+2025-08-22 11:19:23,930 - src.runner - INFO - [DONE] Expérimentation 'Analyse_Referencement_Sources_2024' terminée. 8/8 opérations réalisées.

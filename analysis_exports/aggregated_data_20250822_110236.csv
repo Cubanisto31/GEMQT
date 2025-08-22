@@ -1,0 +1,66 @@
+query_id,query_category,model_name,iteration,total_sources,has_sources,response_time_ms,response_length
+info_actualite_001,Informationnelle - Actualité,Claude-3-Sonnet,1,0,False,3468,173
+info_actualite_001,Informationnelle - Actualité,GPT-4o,1,0,False,6440,2355
+info_actualite_001,Informationnelle - Actualité,Gemini-Pro,1,0,False,5689,4003
+info_actualite_001,Informationnelle - Actualité,Google-Search,1,10,True,705,33529
+info_actualite_001,Informationnelle - Actualité,Perplexity-Online,1,8,True,9441,1957
+info_sante_001,Informationnelle - Santé,Claude-3-Sonnet,1,0,False,0,39
+info_sante_001,Informationnelle - Santé,Claude-3-Sonnet,2,0,False,0,39
+info_sante_001,Informationnelle - Santé,GPT-4o,1,0,False,10525,2020
+info_sante_001,Informationnelle - Santé,GPT-4o,2,0,False,10642,2199
+info_sante_001,Informationnelle - Santé,GPT-4o,3,0,False,12661,2335
+info_sante_001,Informationnelle - Santé,GPT-4o,4,0,False,11148,2248
+info_sante_001,Informationnelle - Santé,GPT-4o,5,0,False,11499,2501
+info_sante_001,Informationnelle - Santé,Gemini-Pro,1,0,False,0,69
+info_sante_001,Informationnelle - Santé,Gemini-Pro,2,0,False,0,69
+info_sante_001,Informationnelle - Santé,Google-Search,1,10,True,254,30757
+info_sante_001,Informationnelle - Santé,Google-Search,2,10,True,317,30757
+info_sante_001,Informationnelle - Santé,Google-Search,3,10,True,257,30757
+info_sante_001,Informationnelle - Santé,Google-Search,4,10,True,381,30757
+info_sante_001,Informationnelle - Santé,Google-Search,5,10,True,258,30757
+info_sante_001,Informationnelle - Santé,Perplexity-Online,1,13,True,7123,1402
+info_tech_001,Informationnelle - Technique,Claude-3-Sonnet,1,0,False,0,39
+info_tech_001,Informationnelle - Technique,Claude-3-Sonnet,2,0,False,0,39
+info_tech_001,Informationnelle - Technique,GPT-4o,1,0,False,12933,2806
+info_tech_001,Informationnelle - Technique,GPT-4o,2,0,False,13498,3431
+info_tech_001,Informationnelle - Technique,GPT-4o,3,0,False,16219,2576
+info_tech_001,Informationnelle - Technique,GPT-4o,4,0,False,16579,2980
+info_tech_001,Informationnelle - Technique,GPT-4o,5,0,False,18255,3091
+info_tech_001,Informationnelle - Technique,Gemini-Pro,1,0,False,0,69
+info_tech_001,Informationnelle - Technique,Gemini-Pro,2,0,False,0,69
+info_tech_001,Informationnelle - Technique,Google-Search,1,10,True,431,34169
+info_tech_001,Informationnelle - Technique,Google-Search,2,10,True,352,34168
+info_tech_001,Informationnelle - Technique,Google-Search,3,10,True,268,34169
+info_tech_001,Informationnelle - Technique,Google-Search,4,10,True,241,34169
+info_tech_001,Informationnelle - Technique,Google-Search,5,10,True,422,34169
+info_tech_001,Informationnelle - Technique,Perplexity-Online,1,11,True,12449,2229
+test_001,Informationnelle,Claude-3-Sonnet,1,0,False,6376,944
+test_001,Informationnelle,GPT-4o,1,0,False,8968,1756
+test_001,Informationnelle,Gemini-Pro,1,0,False,3253,1986
+test_001,Informationnelle,Google-Search,1,10,True,345,24047
+test_001,Informationnelle,Perplexity-Online,1,8,True,5439,1061
+test_002,Navigationnelle,Claude-3-Sonnet,1,1,True,5191,451
+test_002,Navigationnelle,GPT-4o,1,1,True,3826,266
+test_002,Navigationnelle,Gemini-Pro,1,1,True,522,61
+test_002,Navigationnelle,Google-Search,1,10,True,2191,22443
+test_002,Navigationnelle,Perplexity-Online,1,10,True,5016,864
+transac_achat_001,Transactionnelle - Achat,Claude-3-Sonnet,1,0,False,12268,1601
+transac_achat_001,Transactionnelle - Achat,GPT-4o,1,0,False,12170,2399
+transac_achat_001,Transactionnelle - Achat,Gemini-Pro,1,0,False,6536,3629
+transac_achat_001,Transactionnelle - Achat,Google-Search,1,10,True,690,31590
+transac_achat_001,Transactionnelle - Achat,Perplexity-Online,1,7,True,17185,2301
+transac_voyage_001,Transactionnelle - Voyage,Claude-3-Sonnet,1,0,False,0,39
+transac_voyage_001,Transactionnelle - Voyage,Claude-3-Sonnet,2,0,False,0,39
+transac_voyage_001,Transactionnelle - Voyage,GPT-4o,1,0,False,9480,2208
+transac_voyage_001,Transactionnelle - Voyage,GPT-4o,2,0,False,10917,1712
+transac_voyage_001,Transactionnelle - Voyage,GPT-4o,3,0,False,10713,1466
+transac_voyage_001,Transactionnelle - Voyage,GPT-4o,4,0,False,12366,1955
+transac_voyage_001,Transactionnelle - Voyage,GPT-4o,5,0,False,6334,2191
+transac_voyage_001,Transactionnelle - Voyage,Gemini-Pro,1,0,False,0,69
+transac_voyage_001,Transactionnelle - Voyage,Gemini-Pro,2,0,False,0,69
+transac_voyage_001,Transactionnelle - Voyage,Google-Search,1,10,True,696,52825
+transac_voyage_001,Transactionnelle - Voyage,Google-Search,2,10,True,730,52825
+transac_voyage_001,Transactionnelle - Voyage,Google-Search,3,10,True,661,51828
+transac_voyage_001,Transactionnelle - Voyage,Google-Search,4,10,True,535,52825
+transac_voyage_001,Transactionnelle - Voyage,Google-Search,5,10,True,324,52825
+transac_voyage_001,Transactionnelle - Voyage,Perplexity-Online,1,6,True,5324,1790

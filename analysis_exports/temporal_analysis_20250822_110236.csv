@@ -1,0 +1,129 @@
+timestamp,model_name,query_category,avg_response_time,count
+2025-07-21 13:58:05.273894,GPT-4o,Transactionnelle - Voyage,9480.0,1
+2025-07-21 13:58:05.975521,Google-Search,Transactionnelle - Voyage,696.0,1
+2025-07-21 13:58:23.920077,GPT-4o,Informationnelle - Technique,12933.0,1
+2025-07-21 13:58:24.357276,Google-Search,Informationnelle - Technique,431.0,1
+2025-07-21 13:58:39.898996,GPT-4o,Informationnelle - Santé,10525.0,1
+2025-07-21 13:58:40.158365,Google-Search,Informationnelle - Santé,254.0,1
+2025-07-21 13:58:55.812646,GPT-4o,Informationnelle - Santé,10642.0,1
+2025-07-21 13:58:56.134639,Google-Search,Informationnelle - Santé,317.0,1
+2025-07-21 13:59:14.643607,GPT-4o,Informationnelle - Technique,13498.0,1
+2025-07-21 13:59:15.000317,Google-Search,Informationnelle - Technique,352.0,1
+2025-07-21 13:59:30.928231,GPT-4o,Transactionnelle - Voyage,10917.0,1
+2025-07-21 13:59:31.664124,Google-Search,Transactionnelle - Voyage,730.0,1
+2025-07-21 13:59:49.337481,GPT-4o,Informationnelle - Santé,12661.0,1
+2025-07-21 13:59:49.599791,Google-Search,Informationnelle - Santé,257.0,1
+2025-07-21 14:00:05.321909,GPT-4o,Transactionnelle - Voyage,10713.0,1
+2025-07-21 14:00:05.988001,Google-Search,Transactionnelle - Voyage,661.0,1
+2025-07-21 14:00:27.217726,GPT-4o,Informationnelle - Technique,16219.0,1
+2025-07-21 14:00:27.490711,Google-Search,Informationnelle - Technique,268.0,1
+2025-07-21 14:00:49.085056,GPT-4o,Informationnelle - Technique,16579.0,1
+2025-07-21 14:00:49.331934,Google-Search,Informationnelle - Technique,241.0,1
+2025-07-21 14:01:05.490958,GPT-4o,Informationnelle - Santé,11148.0,1
+2025-07-21 14:01:05.877366,Google-Search,Informationnelle - Santé,381.0,1
+2025-07-21 14:01:23.254847,GPT-4o,Transactionnelle - Voyage,12366.0,1
+2025-07-21 14:01:23.794644,Google-Search,Transactionnelle - Voyage,535.0,1
+2025-07-21 14:01:47.061924,GPT-4o,Informationnelle - Technique,18255.0,1
+2025-07-21 14:01:47.489138,Google-Search,Informationnelle - Technique,422.0,1
+2025-07-21 14:02:03.999656,GPT-4o,Informationnelle - Santé,11499.0,1
+2025-07-21 14:02:04.262696,Google-Search,Informationnelle - Santé,258.0,1
+2025-07-21 14:02:15.608133,GPT-4o,Transactionnelle - Voyage,6334.0,1
+2025-07-21 14:02:15.938751,Google-Search,Transactionnelle - Voyage,324.0,1
+2025-07-28 13:36:29.144429,GPT-4o,Transactionnelle - Voyage,0.0,1
+2025-07-28 13:36:29.185784,Claude-3-Sonnet,Transactionnelle - Voyage,0.0,1
+2025-07-28 13:36:29.192949,Google-Search,Transactionnelle - Voyage,0.0,1
+2025-07-28 13:36:29.199738,Gemini-Pro,Transactionnelle - Voyage,0.0,1
+2025-07-28 13:36:34.208869,GPT-4o,Informationnelle - Technique,0.0,1
+2025-07-28 13:36:34.213799,Claude-3-Sonnet,Informationnelle - Technique,0.0,1
+2025-07-28 13:36:34.217625,Google-Search,Informationnelle - Technique,0.0,1
+2025-07-28 13:36:34.221749,Gemini-Pro,Informationnelle - Technique,0.0,1
+2025-07-28 13:36:39.231799,GPT-4o,Informationnelle - Santé,0.0,1
+2025-07-28 13:36:39.235963,Claude-3-Sonnet,Informationnelle - Santé,0.0,1
+2025-07-28 13:36:39.240545,Google-Search,Informationnelle - Santé,0.0,1
+2025-07-28 13:36:39.245797,Gemini-Pro,Informationnelle - Santé,0.0,1
+2025-07-28 13:36:44.256631,GPT-4o,Informationnelle - Technique,0.0,1
+2025-07-28 13:36:44.263161,Claude-3-Sonnet,Informationnelle - Technique,0.0,1
+2025-07-28 13:36:44.267093,Google-Search,Informationnelle - Technique,0.0,1
+2025-07-28 13:36:44.271037,Gemini-Pro,Informationnelle - Technique,0.0,1
+2025-07-28 13:36:49.280532,GPT-4o,Informationnelle - Santé,0.0,1
+2025-07-28 13:36:49.284760,Claude-3-Sonnet,Informationnelle - Santé,0.0,1
+2025-07-28 13:36:49.289203,Google-Search,Informationnelle - Santé,0.0,1
+2025-07-28 13:36:49.293011,Gemini-Pro,Informationnelle - Santé,0.0,1
+2025-07-28 13:36:54.302559,GPT-4o,Transactionnelle - Voyage,0.0,1
+2025-07-28 13:36:54.307982,Claude-3-Sonnet,Transactionnelle - Voyage,0.0,1
+2025-07-28 13:36:54.311637,Google-Search,Transactionnelle - Voyage,0.0,1
+2025-07-28 13:36:54.318224,Gemini-Pro,Transactionnelle - Voyage,0.0,1
+2025-07-28 13:39:53.621734,GPT-4o,Transactionnelle - Voyage,6888.0,1
+2025-07-28 13:39:59.143048,Claude-3-Sonnet,Transactionnelle - Voyage,5514.0,1
+2025-07-28 13:39:59.710967,Google-Search,Transactionnelle - Voyage,563.0,1
+2025-07-28 13:40:07.142363,Gemini-Pro,Transactionnelle - Voyage,7425.0,1
+2025-07-28 13:40:21.068970,GPT-4o,Informationnelle - Santé,8917.0,1
+2025-07-28 13:40:26.248990,Claude-3-Sonnet,Informationnelle - Santé,5171.0,1
+2025-07-28 13:40:26.731943,Google-Search,Informationnelle - Santé,478.0,1
+2025-07-28 13:40:35.025814,Gemini-Pro,Informationnelle - Santé,8288.0,1
+2025-07-28 13:40:53.019873,GPT-4o,Informationnelle - Technique,12983.0,1
+2025-07-28 13:41:03.517679,Claude-3-Sonnet,Informationnelle - Technique,10492.0,1
+2025-07-28 13:41:03.906605,Google-Search,Informationnelle - Technique,383.0,1
+2025-07-28 13:41:09.683954,Gemini-Pro,Informationnelle - Technique,5772.0,1
+2025-07-28 13:41:22.361050,GPT-4o,Transactionnelle - Voyage,7666.0,1
+2025-07-28 13:41:27.642228,Claude-3-Sonnet,Transactionnelle - Voyage,5275.0,1
+2025-07-28 13:41:28.288913,Google-Search,Transactionnelle - Voyage,641.0,1
+2025-07-28 13:41:32.583466,Gemini-Pro,Transactionnelle - Voyage,4289.0,1
+2025-07-28 14:18:45.328154,GPT-4o,Informationnelle - Technique,26514.0,1
+2025-07-28 14:18:51.925957,Claude-3-Sonnet,Informationnelle - Technique,6590.0,1
+2025-07-28 14:18:52.419707,Google-Search,Informationnelle - Technique,488.0,1
+2025-07-28 14:18:58.822361,Gemini-Pro,Informationnelle - Technique,6396.0,1
+2025-07-28 14:19:14.555539,GPT-4o,Informationnelle - Santé,10719.0,1
+2025-07-28 14:19:19.996063,Claude-3-Sonnet,Informationnelle - Santé,5435.0,1
+2025-07-28 14:19:20.401713,Google-Search,Informationnelle - Santé,400.0,1
+2025-07-28 14:19:26.492547,Gemini-Pro,Informationnelle - Santé,6085.0,1
+2025-07-28 14:19:40.067508,GPT-4o,Transactionnelle - Voyage,8564.0,1
+2025-07-28 14:19:46.794467,Claude-3-Sonnet,Transactionnelle - Voyage,6721.0,1
+2025-07-28 14:19:47.315751,Google-Search,Transactionnelle - Voyage,516.0,1
+2025-07-28 14:19:57.064813,Gemini-Pro,Transactionnelle - Voyage,9744.0,1
+2025-07-28 14:20:11.994277,GPT-4o,Transactionnelle - Voyage,9917.0,1
+2025-07-28 14:20:17.009494,Claude-3-Sonnet,Transactionnelle - Voyage,5009.0,1
+2025-07-28 14:20:17.610724,Google-Search,Transactionnelle - Voyage,597.0,1
+2025-07-28 14:23:31.932363,GPT-4o,Transactionnelle - Voyage,8528.0,1
+2025-07-28 14:23:41.553005,Claude-3-Sonnet,Transactionnelle - Voyage,9614.0,1
+2025-07-28 14:23:41.965881,Google-Search,Transactionnelle - Voyage,406.0,1
+2025-07-28 14:23:47.583335,Gemini-Pro,Transactionnelle - Voyage,5611.0,1
+2025-07-28 14:23:52.913148,Perplexity-Online,Transactionnelle - Voyage,5324.0,1
+2025-07-28 14:24:26.597896,GPT-4o,Informationnelle - Santé,28672.0,1
+2025-07-28 14:24:32.987622,Claude-3-Sonnet,Informationnelle - Santé,6384.0,1
+2025-07-28 14:24:33.249735,Google-Search,Informationnelle - Santé,257.0,1
+2025-07-28 14:24:39.453794,Gemini-Pro,Informationnelle - Santé,6198.0,1
+2025-07-28 14:24:46.582531,Perplexity-Online,Informationnelle - Santé,7123.0,1
+2025-07-28 14:25:03.015797,GPT-4o,Informationnelle - Technique,11423.0,1
+2025-07-28 14:25:10.942553,Claude-3-Sonnet,Informationnelle - Technique,7921.0,1
+2025-07-28 14:25:11.356229,Google-Search,Informationnelle - Technique,408.0,1
+2025-07-28 14:25:17.191115,Gemini-Pro,Informationnelle - Technique,5829.0,1
+2025-07-28 14:25:29.645135,Perplexity-Online,Informationnelle - Technique,12449.0,1
+2025-08-21 12:36:52.657081,GPT-4o,Transactionnelle - Achat,12170.0,1
+2025-08-21 12:37:04.942679,Claude-3-Sonnet,Transactionnelle - Achat,12268.0,1
+2025-08-21 12:37:05.647280,Google-Search,Transactionnelle - Achat,690.0,1
+2025-08-21 12:37:12.195604,Gemini-Pro,Transactionnelle - Achat,6536.0,1
+2025-08-21 12:37:29.404302,Perplexity-Online,Transactionnelle - Achat,17185.0,1
+2025-08-21 12:37:40.867482,GPT-4o,Informationnelle - Actualité,6440.0,1
+2025-08-21 12:37:44.349143,Claude-3-Sonnet,Informationnelle - Actualité,3468.0,1
+2025-08-21 12:37:45.066220,Google-Search,Informationnelle - Actualité,705.0,1
+2025-08-21 12:37:50.772555,Gemini-Pro,Informationnelle - Actualité,5689.0,1
+2025-08-21 12:38:00.229105,Perplexity-Online,Informationnelle - Actualité,9441.0,1
+2025-08-21 12:38:15.130404,GPT-4o,Transactionnelle - Voyage,9876.0,1
+2025-08-21 12:38:23.446116,Claude-3-Sonnet,Transactionnelle - Voyage,8305.0,1
+2025-08-21 12:38:24.101117,Google-Search,Transactionnelle - Voyage,644.0,1
+2025-08-21 12:38:28.180074,Gemini-Pro,Transactionnelle - Voyage,4062.0,1
+2025-08-21 12:42:12.994330,GPT-4o,Informationnelle,8968.0,1
+2025-08-21 12:42:19.381139,Claude-3-Sonnet,Informationnelle,6376.0,1
+2025-08-21 12:42:19.735833,Google-Search,Informationnelle,345.0,1
+2025-08-21 12:42:22.999540,Gemini-Pro,Informationnelle,3253.0,1
+2025-08-21 13:19:33.882739,GPT-4o,Navigationnelle,3826.0,1
+2025-08-21 13:19:39.090799,Claude-3-Sonnet,Navigationnelle,5191.0,1
+2025-08-21 13:19:41.292540,Google-Search,Navigationnelle,2191.0,1
+2025-08-21 13:19:41.823337,Gemini-Pro,Navigationnelle,522.0,1
+2025-08-21 13:19:46.850716,Perplexity-Online,Navigationnelle,5016.0,1
+2025-08-21 13:20:01.232658,GPT-4o,Informationnelle,9362.0,1
+2025-08-21 13:20:07.528544,Claude-3-Sonnet,Informationnelle,6282.0,1
+2025-08-21 13:20:08.147574,Google-Search,Informationnelle,604.0,1
+2025-08-21 13:20:11.522354,Gemini-Pro,Informationnelle,3363.0,1
+2025-08-21 13:20:16.971286,Perplexity-Online,Informationnelle,5439.0,1
