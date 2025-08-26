@@ -296,3 +296,160 @@
 2025-08-22 11:19:10,210 - src.runner - INFO - [QUERY] [8/8] Requête 'Site officiel de Python...' -> Perplexity-Online
 2025-08-22 11:19:18,917 - src.runner - INFO - [SAVED] Sauvegardé: Perplexity-Online/test_002 (8694ms, 3 sources)
 2025-08-22 11:19:23,930 - src.runner - INFO - [DONE] Expérimentation 'Analyse_Referencement_Sources_2024' terminée. 8/8 opérations réalisées.
+2025-08-25 17:02:47,927 - src.runner - INFO - [OK] Client GPT-4o initialisé avec succès
+2025-08-25 17:02:47,928 - src.runner - INFO - [OK] Client Google-Search initialisé avec succès
+2025-08-25 17:02:47,928 - src.runner - INFO - [OK] Client Bing-Search initialisé avec succès
+2025-08-25 17:02:47,929 - src.runner - INFO - [OK] Client Gemini-Pro initialisé avec succès
+2025-08-25 17:02:47,929 - src.runner - INFO - [OK] Client Perplexity-Online initialisé avec succès
+2025-08-25 17:02:47,929 - src.runner - INFO - [STATS] 5/5 clients initialisés
+2025-08-25 17:02:47,933 - src.runner - INFO - [START] Démarrage de l'expérimentation 'Analyse_Referencement_Sources_2024' avec la session 7cadbd66-a8a2-497e-849b-b4560a13c861
+2025-08-25 17:02:47,933 - src.runner - INFO - [ITER] Itération 1/1
+2025-08-25 17:02:47,934 - src.runner - INFO - [QUERY] [1/35] Requête 'Réserver un vol pour Paris...' -> GPT-4o
+2025-08-25 17:02:57,255 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 17:02:57,278 - src.runner - INFO - [SAVED] Sauvegardé: GPT-4o/test_004 (9331ms, 0 sources)
+2025-08-25 17:02:57,279 - src.runner - INFO - [QUERY] [2/35] Requête 'Réserver un vol pour Paris...' -> Google-Search
+2025-08-25 17:02:57,780 - src.runner - INFO - [SAVED] Sauvegardé: Google-Search/test_004 (495ms, 10 sources)
+2025-08-25 17:02:57,781 - src.runner - INFO - [QUERY] [3/35] Requête 'Réserver un vol pour Paris...' -> Bing-Search
+2025-08-25 17:02:57,941 - src.runner - INFO - [SAVED] Sauvegardé: Bing-Search/test_004 (154ms, 0 sources)
+2025-08-25 17:02:57,941 - src.runner - INFO - [QUERY] [4/35] Requête 'Réserver un vol pour Paris...' -> Gemini-Pro
+2025-08-25 17:02:59,577 - src.runner - INFO - [SAVED] Sauvegardé: Gemini-Pro/test_004 (1629ms, 0 sources)
+2025-08-25 17:02:59,577 - src.runner - INFO - [QUERY] [5/35] Requête 'Réserver un vol pour Paris...' -> Perplexity-Online
+2025-08-25 17:03:06,588 - src.runner - INFO - [SAVED] Sauvegardé: Perplexity-Online/test_004 (7006ms, 6 sources)
+2025-08-25 17:03:11,595 - src.runner - INFO - [QUERY] [6/35] Requête 'Quel est le meilleur hôtel à Toulouse ?...' -> GPT-4o
+2025-08-25 17:03:16,260 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 17:03:16,269 - src.runner - INFO - [SAVED] Sauvegardé: GPT-4o/test_006 (4668ms, 0 sources)
+2025-08-25 17:03:16,269 - src.runner - INFO - [QUERY] [7/35] Requête 'Quel est le meilleur hôtel à Toulouse ?...' -> Google-Search
+2025-08-25 17:03:16,783 - src.runner - INFO - [SAVED] Sauvegardé: Google-Search/test_006 (506ms, 10 sources)
+2025-08-25 17:03:16,784 - src.runner - INFO - [QUERY] [8/35] Requête 'Quel est le meilleur hôtel à Toulouse ?...' -> Bing-Search
+2025-08-25 17:03:16,906 - src.runner - INFO - [SAVED] Sauvegardé: Bing-Search/test_006 (115ms, 0 sources)
+2025-08-25 17:03:16,906 - src.runner - INFO - [QUERY] [9/35] Requête 'Quel est le meilleur hôtel à Toulouse ?...' -> Gemini-Pro
+2025-08-25 17:03:19,187 - src.runner - INFO - [SAVED] Sauvegardé: Gemini-Pro/test_006 (2274ms, 0 sources)
+2025-08-25 17:03:19,188 - src.runner - INFO - [QUERY] [10/35] Requête 'Quel est le meilleur hôtel à Toulouse ?...' -> Perplexity-Online
+2025-08-25 17:03:28,668 - src.runner - INFO - [SAVED] Sauvegardé: Perplexity-Online/test_006 (9472ms, 13 sources)
+2025-08-25 17:03:33,675 - src.runner - INFO - [QUERY] [11/35] Requête 'Comparer les prix des hôtels à Paris...' -> GPT-4o
+2025-08-25 17:03:43,850 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 17:03:43,865 - src.runner - INFO - [SAVED] Sauvegardé: GPT-4o/test_005 (10182ms, 0 sources)
+2025-08-25 17:03:43,865 - src.runner - INFO - [QUERY] [12/35] Requête 'Comparer les prix des hôtels à Paris...' -> Google-Search
+2025-08-25 17:03:44,390 - src.runner - INFO - [SAVED] Sauvegardé: Google-Search/test_005 (517ms, 10 sources)
+2025-08-25 17:03:44,390 - src.runner - INFO - [QUERY] [13/35] Requête 'Comparer les prix des hôtels à Paris...' -> Bing-Search
+2025-08-25 17:03:44,515 - src.runner - INFO - [SAVED] Sauvegardé: Bing-Search/test_005 (118ms, 0 sources)
+2025-08-25 17:03:44,516 - src.runner - INFO - [QUERY] [14/35] Requête 'Comparer les prix des hôtels à Paris...' -> Gemini-Pro
+2025-08-25 17:03:48,548 - src.runner - INFO - [SAVED] Sauvegardé: Gemini-Pro/test_005 (4025ms, 0 sources)
+2025-08-25 17:03:48,549 - src.runner - INFO - [QUERY] [15/35] Requête 'Comparer les prix des hôtels à Paris...' -> Perplexity-Online
+2025-08-25 17:03:56,135 - src.runner - INFO - [SAVED] Sauvegardé: Perplexity-Online/test_005 (7580ms, 12 sources)
+2025-08-25 17:04:01,149 - src.runner - INFO - [QUERY] [16/35] Requête 'Quel est le meilleur endroit pour partir en vacanc...' -> GPT-4o
+2025-08-25 17:04:22,861 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 17:04:22,871 - src.runner - INFO - [SAVED] Sauvegardé: GPT-4o/test_003 (21715ms, 0 sources)
+2025-08-25 17:04:22,872 - src.runner - INFO - [QUERY] [17/35] Requête 'Quel est le meilleur endroit pour partir en vacanc...' -> Google-Search
+2025-08-25 17:04:23,471 - src.runner - INFO - [SAVED] Sauvegardé: Google-Search/test_003 (592ms, 10 sources)
+2025-08-25 17:04:23,471 - src.runner - INFO - [QUERY] [18/35] Requête 'Quel est le meilleur endroit pour partir en vacanc...' -> Bing-Search
+2025-08-25 17:04:23,586 - src.runner - INFO - [SAVED] Sauvegardé: Bing-Search/test_003 (110ms, 0 sources)
+2025-08-25 17:04:23,587 - src.runner - INFO - [QUERY] [19/35] Requête 'Quel est le meilleur endroit pour partir en vacanc...' -> Gemini-Pro
+2025-08-25 17:04:25,347 - src.runner - INFO - [SAVED] Sauvegardé: Gemini-Pro/test_003 (1737ms, 0 sources)
+2025-08-25 17:04:25,347 - src.runner - INFO - [QUERY] [20/35] Requête 'Quel est le meilleur endroit pour partir en vacanc...' -> Perplexity-Online
+2025-08-25 17:04:37,205 - src.runner - INFO - [SAVED] Sauvegardé: Perplexity-Online/test_003 (11832ms, 21 sources)
+2025-08-25 17:04:42,210 - src.runner - INFO - [QUERY] [21/35] Requête 'Quel est l'endroit idéal pour des vacances en fami...' -> GPT-4o
+2025-08-25 17:04:47,541 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 17:04:47,570 - src.runner - INFO - [SAVED] Sauvegardé: GPT-4o/test_001 (5338ms, 0 sources)
+2025-08-25 17:04:47,570 - src.runner - INFO - [QUERY] [22/35] Requête 'Quel est l'endroit idéal pour des vacances en fami...' -> Google-Search
+2025-08-25 17:04:47,956 - src.runner - INFO - [SAVED] Sauvegardé: Google-Search/test_001 (361ms, 10 sources)
+2025-08-25 17:04:47,956 - src.runner - INFO - [QUERY] [23/35] Requête 'Quel est l'endroit idéal pour des vacances en fami...' -> Bing-Search
+2025-08-25 17:04:48,094 - src.runner - INFO - [SAVED] Sauvegardé: Bing-Search/test_001 (121ms, 0 sources)
+2025-08-25 17:04:48,094 - src.runner - INFO - [QUERY] [24/35] Requête 'Quel est l'endroit idéal pour des vacances en fami...' -> Gemini-Pro
+2025-08-25 17:04:49,932 - src.runner - INFO - [SAVED] Sauvegardé: Gemini-Pro/test_001 (1818ms, 0 sources)
+2025-08-25 17:04:49,933 - src.runner - INFO - [QUERY] [25/35] Requête 'Quel est l'endroit idéal pour des vacances en fami...' -> Perplexity-Online
+2025-08-25 17:05:01,600 - src.runner - INFO - [SAVED] Sauvegardé: Perplexity-Online/test_001 (10243ms, 9 sources)
+2025-08-25 17:05:06,604 - src.runner - INFO - [QUERY] [26/35] Requête 'Quelle est la meilleure chaine d'hôtels en France ...' -> GPT-4o
+2025-08-25 17:05:11,805 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 17:05:11,854 - src.runner - INFO - [SAVED] Sauvegardé: GPT-4o/test_002 (5228ms, 0 sources)
+2025-08-25 17:05:11,854 - src.runner - INFO - [QUERY] [27/35] Requête 'Quelle est la meilleure chaine d'hôtels en France ...' -> Google-Search
+2025-08-25 17:05:12,451 - src.runner - INFO - [SAVED] Sauvegardé: Google-Search/test_002 (561ms, 10 sources)
+2025-08-25 17:05:12,451 - src.runner - INFO - [QUERY] [28/35] Requête 'Quelle est la meilleure chaine d'hôtels en France ...' -> Bing-Search
+2025-08-25 17:05:12,602 - src.runner - INFO - [SAVED] Sauvegardé: Bing-Search/test_002 (126ms, 0 sources)
+2025-08-25 17:05:12,603 - src.runner - INFO - [QUERY] [29/35] Requête 'Quelle est la meilleure chaine d'hôtels en France ...' -> Gemini-Pro
+2025-08-25 17:05:15,148 - src.runner - INFO - [SAVED] Sauvegardé: Gemini-Pro/test_002 (2508ms, 0 sources)
+2025-08-25 17:05:15,149 - src.runner - INFO - [QUERY] [30/35] Requête 'Quelle est la meilleure chaine d'hôtels en France ...' -> Perplexity-Online
+2025-08-25 17:05:26,035 - src.runner - INFO - [SAVED] Sauvegardé: Perplexity-Online/test_002 (10837ms, 8 sources)
+2025-08-25 17:05:31,053 - src.runner - INFO - [QUERY] [31/35] Requête 'Réserver une table dans un restaurant à Biarritz ?...' -> GPT-4o
+2025-08-25 17:05:35,972 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 17:05:36,033 - src.runner - INFO - [SAVED] Sauvegardé: GPT-4o/test_007 (4920ms, 0 sources)
+2025-08-25 17:05:36,033 - src.runner - INFO - [QUERY] [32/35] Requête 'Réserver une table dans un restaurant à Biarritz ?...' -> Google-Search
+2025-08-25 17:05:36,588 - src.runner - INFO - [SAVED] Sauvegardé: Google-Search/test_007 (493ms, 10 sources)
+2025-08-25 17:05:36,588 - src.runner - INFO - [QUERY] [33/35] Requête 'Réserver une table dans un restaurant à Biarritz ?...' -> Bing-Search
+2025-08-25 17:05:36,814 - src.runner - INFO - [SAVED] Sauvegardé: Bing-Search/test_007 (118ms, 0 sources)
+2025-08-25 17:05:36,814 - src.runner - INFO - [QUERY] [34/35] Requête 'Réserver une table dans un restaurant à Biarritz ?...' -> Gemini-Pro
+2025-08-25 17:05:38,387 - src.runner - INFO - [SAVED] Sauvegardé: Gemini-Pro/test_007 (1553ms, 0 sources)
+2025-08-25 17:05:38,387 - src.runner - INFO - [QUERY] [35/35] Requête 'Réserver une table dans un restaurant à Biarritz ?...' -> Perplexity-Online
+2025-08-25 17:05:48,555 - src.runner - INFO - [SAVED] Sauvegardé: Perplexity-Online/test_007 (10161ms, 5 sources)
+2025-08-25 17:05:53,564 - src.runner - INFO - [DONE] Expérimentation 'Analyse_Referencement_Sources_2024' terminée. 35/35 opérations réalisées.
+2025-08-26 15:37:34,101 - src.runner - INFO - [OK] Client GPT-4o initialisé avec succès
+2025-08-26 15:37:34,103 - src.runner - INFO - [OK] Client Google-Search initialisé avec succès
+2025-08-26 15:37:34,103 - src.runner - INFO - [OK] Client Gemini-Pro initialisé avec succès
+2025-08-26 15:37:34,103 - src.runner - INFO - [OK] Client Perplexity-Online initialisé avec succès
+2025-08-26 15:37:34,103 - src.runner - INFO - [STATS] 4/4 clients initialisés
+2025-08-26 15:37:34,107 - src.runner - INFO - [START] Démarrage de l'expérimentation 'Analyse_Referencement_Sources_2024' avec la session a7f92912-02ab-4725-ba37-4446582cbe52
+2025-08-26 15:37:34,107 - src.runner - INFO - [ITER] Itération 1/1
+2025-08-26 15:37:34,108 - src.runner - INFO - [QUERY] [1/28] Requête 'Réserver une table dans un restaurant à Biarritz ?...' -> GPT-4o
+2025-08-26 15:37:41,354 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-26 15:37:41,375 - src.runner - INFO - [SAVED] Sauvegardé: GPT-4o/test_007 (7254ms, 0 sources)
+2025-08-26 15:37:41,375 - src.runner - INFO - [QUERY] [2/28] Requête 'Réserver une table dans un restaurant à Biarritz ?...' -> Google-Search
+2025-08-26 15:37:41,882 - src.runner - INFO - [SAVED] Sauvegardé: Google-Search/test_007 (496ms, 10 sources)
+2025-08-26 15:37:41,882 - src.runner - INFO - [QUERY] [3/28] Requête 'Réserver une table dans un restaurant à Biarritz ?...' -> Gemini-Pro
+2025-08-26 15:37:43,201 - src.runner - INFO - [SAVED] Sauvegardé: Gemini-Pro/test_007 (1312ms, 0 sources)
+2025-08-26 15:37:43,202 - src.runner - INFO - [QUERY] [4/28] Requête 'Réserver une table dans un restaurant à Biarritz ?...' -> Perplexity-Online
+2025-08-26 15:37:59,636 - src.runner - INFO - [SAVED] Sauvegardé: Perplexity-Online/test_007 (16427ms, 5 sources)
+2025-08-26 15:38:04,648 - src.runner - INFO - [QUERY] [5/28] Requête 'Quel est l'endroit idéal pour des vacances en fami...' -> GPT-4o
+2025-08-26 15:38:10,623 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-26 15:38:10,634 - src.runner - INFO - [SAVED] Sauvegardé: GPT-4o/test_001 (5979ms, 0 sources)
+2025-08-26 15:38:10,635 - src.runner - INFO - [QUERY] [6/28] Requête 'Quel est l'endroit idéal pour des vacances en fami...' -> Google-Search
+2025-08-26 15:38:11,155 - src.runner - INFO - [SAVED] Sauvegardé: Google-Search/test_001 (513ms, 10 sources)
+2025-08-26 15:38:11,156 - src.runner - INFO - [QUERY] [7/28] Requête 'Quel est l'endroit idéal pour des vacances en fami...' -> Gemini-Pro
+2025-08-26 15:38:13,980 - src.runner - INFO - [SAVED] Sauvegardé: Gemini-Pro/test_001 (2819ms, 0 sources)
+2025-08-26 15:38:13,980 - src.runner - INFO - [QUERY] [8/28] Requête 'Quel est l'endroit idéal pour des vacances en fami...' -> Perplexity-Online
+2025-08-26 15:38:24,801 - src.runner - INFO - [SAVED] Sauvegardé: Perplexity-Online/test_001 (10814ms, 5 sources)
+2025-08-26 15:38:29,810 - src.runner - INFO - [QUERY] [9/28] Requête 'Réserver un vol pour Paris...' -> GPT-4o
+2025-08-26 15:38:34,611 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-26 15:38:34,620 - src.runner - INFO - [SAVED] Sauvegardé: GPT-4o/test_004 (4804ms, 0 sources)
+2025-08-26 15:38:34,620 - src.runner - INFO - [QUERY] [10/28] Requête 'Réserver un vol pour Paris...' -> Google-Search
+2025-08-26 15:38:34,908 - src.runner - INFO - [SAVED] Sauvegardé: Google-Search/test_004 (281ms, 10 sources)
+2025-08-26 15:38:34,908 - src.runner - INFO - [QUERY] [11/28] Requête 'Réserver un vol pour Paris...' -> Gemini-Pro
+2025-08-26 15:38:36,653 - src.runner - INFO - [SAVED] Sauvegardé: Gemini-Pro/test_004 (1738ms, 0 sources)
+2025-08-26 15:38:36,653 - src.runner - INFO - [QUERY] [12/28] Requête 'Réserver un vol pour Paris...' -> Perplexity-Online
+2025-08-26 15:38:44,037 - src.runner - INFO - [SAVED] Sauvegardé: Perplexity-Online/test_004 (7355ms, 9 sources)
+2025-08-26 15:38:49,044 - src.runner - INFO - [QUERY] [13/28] Requête 'Quelle est la meilleure chaine d'hôtels en France ...' -> GPT-4o
+2025-08-26 15:38:52,702 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-26 15:38:52,743 - src.runner - INFO - [SAVED] Sauvegardé: GPT-4o/test_002 (3676ms, 0 sources)
+2025-08-26 15:38:52,744 - src.runner - INFO - [QUERY] [14/28] Requête 'Quelle est la meilleure chaine d'hôtels en France ...' -> Google-Search
+2025-08-26 15:38:53,330 - src.runner - INFO - [SAVED] Sauvegardé: Google-Search/test_002 (564ms, 10 sources)
+2025-08-26 15:38:53,330 - src.runner - INFO - [QUERY] [15/28] Requête 'Quelle est la meilleure chaine d'hôtels en France ...' -> Gemini-Pro
+2025-08-26 15:38:56,666 - src.runner - INFO - [SAVED] Sauvegardé: Gemini-Pro/test_002 (3274ms, 0 sources)
+2025-08-26 15:38:56,667 - src.runner - INFO - [QUERY] [16/28] Requête 'Quelle est la meilleure chaine d'hôtels en France ...' -> Perplexity-Online
+2025-08-26 15:39:07,647 - src.runner - INFO - [SAVED] Sauvegardé: Perplexity-Online/test_002 (10930ms, 6 sources)
+2025-08-26 15:39:12,662 - src.runner - INFO - [QUERY] [17/28] Requête 'Quel est le meilleur endroit pour partir en vacanc...' -> GPT-4o
+2025-08-26 15:39:17,577 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-26 15:39:17,794 - src.runner - INFO - [SAVED] Sauvegardé: GPT-4o/test_003 (4968ms, 0 sources)
+2025-08-26 15:39:17,795 - src.runner - INFO - [QUERY] [18/28] Requête 'Quel est le meilleur endroit pour partir en vacanc...' -> Google-Search
+2025-08-26 15:39:18,371 - src.runner - INFO - [SAVED] Sauvegardé: Google-Search/test_003 (527ms, 10 sources)
+2025-08-26 15:39:18,371 - src.runner - INFO - [QUERY] [19/28] Requête 'Quel est le meilleur endroit pour partir en vacanc...' -> Gemini-Pro
+2025-08-26 15:39:20,129 - src.runner - INFO - [SAVED] Sauvegardé: Gemini-Pro/test_003 (1704ms, 0 sources)
+2025-08-26 15:39:20,129 - src.runner - INFO - [QUERY] [20/28] Requête 'Quel est le meilleur endroit pour partir en vacanc...' -> Perplexity-Online
+2025-08-26 15:39:28,294 - src.runner - INFO - [SAVED] Sauvegardé: Perplexity-Online/test_003 (8120ms, 25 sources)
+2025-08-26 15:39:33,303 - src.runner - INFO - [QUERY] [21/28] Requête 'Comparer les prix des hôtels à Paris...' -> GPT-4o
+2025-08-26 15:39:37,679 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-26 15:39:37,687 - src.runner - INFO - [SAVED] Sauvegardé: GPT-4o/test_005 (4377ms, 0 sources)
+2025-08-26 15:39:37,688 - src.runner - INFO - [QUERY] [22/28] Requête 'Comparer les prix des hôtels à Paris...' -> Google-Search
+2025-08-26 15:39:38,346 - src.runner - INFO - [SAVED] Sauvegardé: Google-Search/test_005 (651ms, 10 sources)
+2025-08-26 15:39:38,347 - src.runner - INFO - [QUERY] [23/28] Requête 'Comparer les prix des hôtels à Paris...' -> Gemini-Pro
+2025-08-26 15:39:41,667 - src.runner - INFO - [SAVED] Sauvegardé: Gemini-Pro/test_005 (3313ms, 0 sources)
+2025-08-26 15:39:41,667 - src.runner - INFO - [QUERY] [24/28] Requête 'Comparer les prix des hôtels à Paris...' -> Perplexity-Online
+2025-08-26 15:39:51,988 - src.runner - INFO - [SAVED] Sauvegardé: Perplexity-Online/test_005 (10312ms, 27 sources)
+2025-08-26 15:39:57,002 - src.runner - INFO - [QUERY] [25/28] Requête 'Quel est le meilleur hôtel à Toulouse ?...' -> GPT-4o
+2025-08-26 15:40:01,499 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-26 15:40:01,518 - src.runner - INFO - [SAVED] Sauvegardé: GPT-4o/test_006 (4507ms, 0 sources)
+2025-08-26 15:40:01,518 - src.runner - INFO - [QUERY] [26/28] Requête 'Quel est le meilleur hôtel à Toulouse ?...' -> Google-Search
+2025-08-26 15:40:02,093 - src.runner - INFO - [SAVED] Sauvegardé: Google-Search/test_006 (568ms, 10 sources)
+2025-08-26 15:40:02,093 - src.runner - INFO - [QUERY] [27/28] Requête 'Quel est le meilleur hôtel à Toulouse ?...' -> Gemini-Pro
+2025-08-26 15:40:04,118 - src.runner - INFO - [SAVED] Sauvegardé: Gemini-Pro/test_006 (2018ms, 0 sources)
+2025-08-26 15:40:04,119 - src.runner - INFO - [QUERY] [28/28] Requête 'Quel est le meilleur hôtel à Toulouse ?...' -> Perplexity-Online
+2025-08-26 15:40:14,191 - src.runner - INFO - [SAVED] Sauvegardé: Perplexity-Online/test_006 (10067ms, 13 sources)
+2025-08-26 15:40:19,203 - src.runner - INFO - [DONE] Expérimentation 'Analyse_Referencement_Sources_2024' terminée. 28/28 opérations réalisées.

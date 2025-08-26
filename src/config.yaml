@@ -40,7 +40,7 @@ models:
   - name: "Bing-Search"
     type: "search_engine"
     client: "bing_search"
-    enabled: false  # Désactivé par défaut - activez après avoir obtenu une clé API
+    enabled: false  
     api_key_env_var: "BING_API_KEY"
     parameters:
       num_results: 10

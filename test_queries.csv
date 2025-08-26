@@ -1,3 +1,8 @@
 id,text,category,complexité,domaine,intention
-test_001,"Qu'est-ce que Python ?","Informationnelle",faible,technologie,
-test_002,"Site officiel de Python","Navigationnelle",faible,technologie,
+test_001,"Quel est l'endroit idéal pour des vacances en famille ?","Informationnelle",faible, tourisme,
+test_002,"Quelle est la meilleure chaine d'hôtels en France ?","Informationnelle",faible, tourisme,
+test_003,"Quel est le meilleur endroit pour partir en vacances en France ?","Informationnelle",faible, tourisme,
+test_004,"Réserver un vol pour Paris","Transactionnelle",élevée, tourisme,
+test_005,"Comparer les prix des hôtels à Paris","Transactionnelle",élevée, tourisme,
+test_006,"Quel est le meilleur hôtel à Toulouse ?","Informationnelle",faible, tourisme,
+test_007,"Réserver une table dans un restaurant à Biarritz ?","Transactionnelle",élevée, tourisme,
