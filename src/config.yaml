@@ -66,18 +66,56 @@ models:
       max_tokens: 4000
       search_recency_filter: "week"  # Filtre pour les résultats récents
 
+
+  # ========== CLIENTS AVEC RECHERCHE WEB ==========
+
+
+  - name: "GPT-4-Search"
+    type: "llm"
+    client: "openai_search"
+    enabled: false
+    api_key_env_var: "OPENAI_API_KEY"
+    parameters:
+      model_name: "gpt-4o"  # Utilise gpt-4o avec recherche activée
+      temperature: 0.7
+      max_tokens: 4000
+
+  - name: "Claude-3-Sonnet-Search"
+    type: "llm"
+    client: "claude_search"
+    enabled: false  # Désactivé par défaut (coûteux: $10/1000 recherches)
+    api_key_env_var: "ANTHROPIC_API_KEY"
+    parameters:
+      model: "claude-3-5-sonnet-20241022"
+      temperature: 0.7
+      enable_search: true
+
+  - name: "Gemini-Flash-Grounding" 
+    type: "llm"
+    client: "gemini_search"
+    enabled: false  # Désactivé par défaut (coûteux: $35/1000 requêtes)
+    api_key_env_var: "GOOGLE_API_KEY"
+    parameters:
+      model: "gemini-1.5-flash"
+      temperature: 0.7
+
+  - name: "Perplexity-Sonar-Pro"
+    type: "llm"
+    client: "perplexity_search"
+    enabled: true
+    api_key_env_var: "PERPLEXITY_API_KEY"
+    parameters:
+      model: "sonar-pro"  # Version Pro avec plus de citations
+      temperature: 0.7
+      return_images: false
+      return_related_questions: false
+
+# Requêtes de test pour les nouveaux clients de recherche
 queries:
-  - id: "info_sante_001"
-    text: "Quels sont les symptômes et les traitements de la grippe saisonnière ?"
-    category: "Informationnelle - Santé"
-    metadata: { "complexité": "faible", "domaine": "santé" }
+  - id: "test_search_sources"
+    text: "Quelles sont les dernières avancées en intelligence artificielle générative en 2024?"
+    category: "information"
+    metadata:
+      test_purpose: "Vérifier extraction des sources web"
+      complexity: "medium"
 
-  - id: "info_tech_001"
-    text: "Explique le fonctionnement des transformeurs dans les modèles de langage comme GPT."
-    category: "Informationnelle - Technique"
-    metadata: { "complexité": "élevée", "domaine": "technologie" }
-
-  - id: "transac_voyage_001"
-    text: "Trouver les meilleurs hôtels à Rome pour un week-end en octobre avec un budget de 500 euros."
-    category: "Transactionnelle - Voyage"
-    metadata: { "intention": "réservation", "domaine": "tourisme" }

@@ -37,7 +37,7 @@ Consultez [API_SETUP_GUIDE.md](API_SETUP_GUIDE.md) pour des instructions détail
 │   └── main.py
 ├── API_SETUP_GUIDE.md
 ├── CLAUDE.md
-├── queries_pool_v1.xlsx           # Pool de requêtes Excel existant
+├── test_queries_bis.xlsx           # Pool de requêtes Excel de test
 ├── queries_pool_example.csv       # Exemple de fichier CSV
 ├── requirements.txt
 └── README.md
@@ -82,13 +82,13 @@ Le système supporte maintenant le chargement des requêtes depuis un fichier ex
 
 ```bash
 # Avec un fichier Excel
-python -m src.main --queries queries_pool_v1.xlsx
+python -m src.main --queries test_queries_bis.xlsx
 
 # Avec un fichier CSV
 python -m src.main --queries queries_pool_example.csv
 
 # Avec une configuration personnalisée ET un fichier de requêtes externe
-python -m src.main --config src/config_without_queries.yaml --queries queries_pool_v1.xlsx
+python -m src.main --config src/config_without_queries.yaml --queries test_queries_bis.xlsx
 ```
 
 #### Format du fichier de requêtes

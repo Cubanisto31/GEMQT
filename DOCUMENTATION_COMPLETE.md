@@ -96,11 +96,10 @@ testACv1/
 │   ├── temporal_analysis_*.csv  # Analyse temporelle
 │   └── analysis_script.R        # Script R généré
 ├── .env                          # Variables d'environnement (clés API)
-├── CLAUDE.md                     # Instructions spécifiques projet
 ├── API_SETUP_GUIDE.md           # Guide d'obtention des clés API
 ├── README.md                     # Documentation générale
 ├── export_to_csv.py             # Script d'export vers CSV
-└── queries_pool_v1.xlsx         # Pool de requêtes d'expérience
+└── test_queries_bis.xlsx         # Pool de requêtes d'expérience
 ```
 
 ---

@@ -11,9 +11,18 @@ class QueryConfig(BaseModel):
 
 class ModelParameters(BaseModel):
     model_name: Optional[str] = None
+    model: Optional[str] = None  # Alias pour model_name
     temperature: Optional[float] = 0.7
     max_tokens: Optional[int] = 4000
     num_results: Optional[int] = 10
+    
+    # Paramètres pour les clients de recherche
+    enable_search: Optional[bool] = True
+    return_images: Optional[bool] = False
+    return_related_questions: Optional[bool] = False
+    academic: Optional[bool] = False
+    latest_updated: Optional[str] = None
+    search_recency_filter: Optional[str] = None
 
 class ModelConfig(BaseModel):
     name: str = Field(..., description="Nom unique pour le modèle (ex: 'GPT-4o')")
