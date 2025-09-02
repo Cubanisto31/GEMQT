@@ -1,7 +1,0 @@
-id,text,category,complexité,domaine,intention
-info_sante_001,"Quels sont les symptômes et les traitements de la grippe saisonnière ?","Informationnelle - Santé",faible,santé,
-info_tech_001,"Explique le fonctionnement des transformeurs dans les modèles de langage comme GPT.","Informationnelle - Technique",élevée,technologie,
-transac_voyage_001,"Trouver les meilleurs hôtels à Rome pour un week-end en octobre avec un budget de 500 euros.","Transactionnelle - Voyage",,tourisme,réservation
-nav_site_001,"Site officiel de la Banque de France","Navigationnelle",,finance,
-info_actualite_001,"Quelles sont les dernières avancées en matière d'intelligence artificielle générative ?","Informationnelle - Actualité",moyenne,technologie,
-transac_achat_001,"Acheter un ordinateur portable performant pour le développement logiciel avec un budget de 1500 euros","Transactionnelle - Achat",,technologie,achat

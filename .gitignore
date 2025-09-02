@@ -6,3 +6,5 @@ article_arxiv
 API_KEY_link
 test_bing_api.py
 testdb.csv
+experiment_data.db
+experiment.log
