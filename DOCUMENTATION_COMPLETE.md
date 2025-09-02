@@ -28,8 +28,10 @@ Ce système a été conçu pour analyser comment différents agents conversation
 
 ### Fonctionnalités principales
 - Interrogation automatisée de multiples APIs (LLMs et moteurs de recherche)
+- Clients de recherche web avancés (Claude Web Search, Gemini Grounding, Perplexity Pro)
 - Extraction et analyse des sources citées
-- Stockage des résultats dans une base SQLite
+- Support des fichiers de requêtes externes (Excel/CSV)
+- Stockage des réponses complètes et métadonnées dans base SQLite
 - Export vers CSV pour analyse dans R
 - Support de multiples itérations et sessions
 
@@ -160,6 +162,7 @@ BING_API_KEY="..."
 # Fonctionnalités :
 - Chargement des variables d'environnement
 - Parsing de la configuration YAML
+- Support des fichiers de requêtes externes (--queries)
 - Initialisation de la base de données
 - Lancement de l'ExperimentRunner
 - Gestion des erreurs globales
@@ -236,30 +239,54 @@ class BaseClient(ABC):
 
 ### 6.2 Implémentations spécifiques
 
-#### OpenAIClient
+#### Clients Conversationnels Classiques
+
+**OpenAIClient**
 - Utilise l'API ChatCompletion d'OpenAI
 - Modèles supportés : gpt-4o, gpt-4, gpt-3.5-turbo
 - Extraction de sources par patterns regex
 
-#### ClaudeClient
+**ClaudeClient**
 - API Messages d'Anthropic
 - Modèles : claude-3-5-sonnet, claude-3-opus
 - Gestion du header anthropic-version
 
-#### GeminiClient
+**GeminiClient**
 - API Google Generative AI
 - Modèles : gemini-1.5-flash, gemini-pro
-- Format de requête spécifique Google
+- Nécessite le SDK google-generativeai
 
-#### PerplexityClient
-- API avec recherche web intégrée
-- Modèles : sonar, sonar-reasoning
-- Extraction des citations natives + patterns
+**PerplexityClient**
+- API Perplexity avec recherche web native
+- Modèles : sonar, sonar-pro
+- Citations automatiques intégrées
 
-#### SearchClients (Google, Bing)
-- API Custom Search de Google
-- Bing Web Search API
-- Retourne les résultats bruts JSON
+#### Clients avec Recherche Web Avancée
+
+**ClaudeSearchClient**
+- Claude + API Web Search officielle
+- Coût : 10$/1000 recherches + tokens standard
+- Extraction automatique des sources web
+
+**GeminiSearchClient**
+- Gemini + Google Search Grounding
+- Coût : 35$/1000 requêtes + tokens standard
+- Métadonnées de grounding détaillées
+
+**PerplexitySearchClient**
+- Version optimisée du client Perplexity
+- Extraction de sources améliorée
+- Support des filtres académiques et temporels
+
+**OpenAISearchClient**
+- Note : Désactivé (pas de recherche web native dans l'API OpenAI)
+
+#### Moteurs de Recherche Classiques
+
+**SearchClients (Google, Bing)**
+- GoogleSearchClient : API Custom Search de Google
+- BingSearchClient : Bing Web Search API
+- Retourne les résultats bruts JSON avec métadonnées
 
 ### 6.3 Extraction des sources
 

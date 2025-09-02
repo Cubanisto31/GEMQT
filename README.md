@@ -4,28 +4,37 @@ Ce projet fournit un framework complet pour mener des expérimentations à grand
 
 ## Nouveautés 
 
-###  Support des fichiers de requêtes externes
+### Clients de recherche web avancés
+- **Perplexity Sonar Pro** : Extraction optimisée avec plus de citations
+- **Claude Web Search** : API officielle de recherche web Anthropic ($10/1000 requêtes)
+- **Gemini Grounding** : Recherche Google intégrée ($35/1000 requêtes)
+
+### Support des fichiers de requêtes externes
 Les requêtes peuvent maintenant être chargées depuis un fichier Excel ou CSV externe, évitant de modifier le fichier de configuration YAML.
 
-###  Réponses complètes sauvegardées
+### Réponses complètes sauvegardées
 Les réponses complètes sont désormais sauvegardées dans le champ `response_raw` de la base de données.
 
-###  Guide d'obtention des clés API
+### Guide d'obtention des clés API
 Consultez [API_SETUP_GUIDE.md](API_SETUP_GUIDE.md) pour des instructions détaillées sur l'obtention des clés API.
 
 ## Structure du Projet
 
 ```
 .
-├── 📂 experiment_results/
-├── 📂 src/
+├── experiment_results/
+├── src/
 │   ├── clients/
 │   │   ├── __init__.py
 │   │   ├── base_client.py
 │   │   ├── claude_client.py
+│   │   ├── claude_search_client.py
 │   │   ├── openai_client.py
+│   │   ├── openai_search_client.py
 │   │   ├── gemini_client.py
+│   │   ├── gemini_search_client.py
 │   │   ├── perplexity_client.py
+│   │   ├── perplexity_search_client.py
 │   │   └── search_clients.py
 │   ├── __init__.py
 │   ├── config.py
@@ -270,15 +279,28 @@ sqlite3 experiment_results/experiment_data.db ".mode csv" ".headers on" \
         ".output all_results.csv" "SELECT * FROM results;" ".quit"
 ```
 
+## Modèles et Clients Disponibles
+
+### Agents Conversationnels Classiques
+- **GPT-4o** (`openai`) : Modèle OpenAI sans recherche web
+- **Claude-3-Sonnet** (`claude`) : Modèle Anthropic sans recherche web
+- **Gemini-Pro** (`gemini`) : Modèle Google sans recherche web
+- **Perplexity-Online** (`perplexity`) : Modèle Perplexity avec recherche web native
+
+### Agents avec Recherche Web Avancée
+- **Claude-3-Sonnet-Search** (`claude_search`) : Claude + Web Search API
+- **Gemini-Flash-Grounding** (`gemini_search`) : Gemini + Google Search Grounding
+- **Perplexity-Sonar-Pro** (`perplexity_search`) : Version Pro avec extraction optimisée
+
+### Moteurs de Recherche
+- **Google-Search** (`google_search`) : API Google Custom Search
+- **Bing-Search** (`bing_search`) : API Bing Search
+
+Note : GPT-4-Search est désactivé car OpenAI ne propose pas de recherche web native dans son API.
+
 ## Prochaines étapes
 
-- Il manque toujours la clé de Bing 
 - Faire attention aux crédits sur les différentes clés API
 - Commencer à faire une première analyse sur un test
-
-Ensuite on verra pour :
-
-- [ ] Système d'automatisation temporelle (planification des exécutions)
-- [ ] Intégration Microsoft Copilot
-- [ ] Amélioration du pool de requêtes
-- [ ] Dashboard de visualisation en temps réel
+- Système d'automatisation temporelle (planification des exécutions)
+- Amélioration du pool de requêtes

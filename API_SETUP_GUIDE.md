@@ -77,8 +77,8 @@ DuckDuckGo peut être utilisé via web scraping, mais attention aux limitations 
 
 2. **Obtenir l'accès à l'API**
    - Complétez votre profil
-   - Demandez l'accès à l'API (peut nécessiter une approbation)
-   - Une fois approuvé, vous recevrez un email de confirmation
+   - L'accès à l'API est maintenant généralement immédiat
+   - Ajoutez des crédits à votre compte si nécessaire
 
 3. **Générer une clé API**
    - Connectez-vous à la console Anthropic
@@ -91,9 +91,14 @@ DuckDuckGo peut être utilisé via web scraping, mais attention aux limitations 
    export ANTHROPIC_API_KEY="votre_clé_api_ici"
    ```
 
+### Fonctionnalités disponibles:
+- **Claude standard** : Modèles conversationnels classiques
+- **Claude Web Search** : Recherche web intégrée (10$/1000 recherches + tokens)
+
 ### Tarification:
-- Claude 3 Sonnet: ~3$ pour 1M tokens d'entrée, ~15$ pour 1M tokens de sortie
+- Claude 3.5 Sonnet: ~3$ pour 1M tokens d'entrée, ~15$ pour 1M tokens de sortie
 - Claude 3 Opus: ~15$ pour 1M tokens d'entrée, ~75$ pour 1M tokens de sortie
+- Web Search: 10$ supplémentaires pour 1000 recherches
 
 ## 3. Google Gemini API
 
@@ -110,12 +115,22 @@ DuckDuckGo peut être utilisé via web scraping, mais attention aux limitations 
 
 3. **Configurer la variable d'environnement**
    ```bash
-   export GEMINI_API_KEY="votre_clé_api_ici"
+   export GOOGLE_API_KEY="votre_clé_api_ici"
    ```
+
+### Installation du SDK (requis pour les clients de recherche):
+```bash
+pip install google-generativeai
+```
+
+### Fonctionnalités disponibles:
+- **Gemini standard** : Modèles conversationnels classiques
+- **Gemini Grounding** : Google Search Grounding (35$/1000 requêtes + tokens)
 
 ### Limites gratuites:
 - 60 requêtes par minute
 - Quotas quotidiens généreux
+- Grounding avec Google Search: 35$ pour 1000 requêtes
 
 ## 4. Perplexity API
 
@@ -134,6 +149,15 @@ DuckDuckGo peut être utilisé via web scraping, mais attention aux limitations 
    ```bash
    export PERPLEXITY_API_KEY="votre_clé_api_ici"
    ```
+
+### Fonctionnalités disponibles:
+- **Perplexity Standard** (`perplexity`) : Modèle Sonar avec recherche web native
+- **Perplexity Sonar Pro** (`perplexity_search`) : Version optimisée avec extraction de sources améliorée
+
+### Avantages:
+- Recherche web intégrée par défaut
+- Citations automatiques incluses dans les réponses
+- Pas de coût supplémentaire pour la recherche web
 
 ## 5. Microsoft Copilot (via Azure OpenAI)
 
@@ -169,10 +193,9 @@ Une fois les clés obtenues:
    OPENAI_API_KEY=sk-...
    ANTHROPIC_API_KEY=sk-ant-...
    BING_API_KEY=...
-   GEMINI_API_KEY=...
+   GOOGLE_API_KEY=...          # Pour Gemini ET Google Custom Search
+   GOOGLE_CX=...               # Pour Google Custom Search uniquement
    PERPLEXITY_API_KEY=...
-   GOOGLE_API_KEY=...
-   GOOGLE_CX=...
    ```
 
 3. Activez les modèles souhaités dans `src/config.yaml` en changeant `enabled: false` en `enabled: true`
