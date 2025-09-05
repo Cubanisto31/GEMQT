@@ -292,9 +292,8 @@ sqlite3 experiment_results/experiment_data.db ".mode csv" ".headers on" \
 - **Gemini-Flash-Grounding** (`gemini_search`) : Gemini + Google Search Grounding
 - **Perplexity-Sonar-Pro** (`perplexity_search`) : Version Pro avec extraction optimisée
 
-### Moteurs de Recherche
+### Moteur de Recherche
 - **Google-Search** (`google_search`) : API Google Custom Search
-- **Bing-Search** (`bing_search`) : API Bing Search
 
 Note : GPT-4-Search est désactivé car OpenAI ne propose pas de recherche web native dans son API.
 
