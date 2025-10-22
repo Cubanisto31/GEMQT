@@ -45,7 +45,6 @@ Consultez [API_SETUP_GUIDE.md](API_SETUP_GUIDE.md) pour des instructions détail
 │   ├── runner.py
 │   └── main.py
 ├── API_SETUP_GUIDE.md
-├── CLAUDE.md
 ├── test_queries_bis.xlsx           # Pool de requêtes Excel de test
 ├── queries_pool_example.csv       # Exemple de fichier CSV
 ├── requirements.txt
